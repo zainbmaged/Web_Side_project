@@ -4,75 +4,79 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        a{
+            text-decoration: none;
+            color: #828297;
+            font-family: Alike;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 14px; /* 58.333% */
+    
+        }
+        .nav{
+            display: flex;
+            gap: 3rem;
+            justify-content:space-around;
+            align-items: center;
+    
+        }
+        .sign{
+            display: flex;
+            gap: 1rem;
+           margin-left: 20vw;
+        }
+        nav{
+            border-radius: 10px;
+            width: fit-content;
+            padding: 0.5em;
+            background-color:white;
+            display:flex;
+            margin: 1rem auto;
+            position:sticky;
+            top:0px;
+            z-index: 10;
+
+            
+        }
+        .btn1 ,.btn2{
+            display: inline-flex;
+            height: 55px;
+            justify-content: center;
+            align-items: center;
+            flex-shrink: 0;
+            border-radius:5px;
+        }
+        .btn2{
+            border: 0px ;
+            background-color: white;
+        }
+        .btn1{
+            border-radius: 6px;
+            background: var(--Primary, #060640);
+        }
+        .btn_a{
+            color: white;
+        }
+        .btn2-a{
+            color:black;
+        }
+        body{
+            height: 2000px;
+        }
+    
+    </style>
+    
 </head>
-<style>
-    a{
-        text-decoration: none;
-        color: #828297;
-        font-family: Alike;
-        font-size: 24px;
-        font-style: normal;
-        font-weight: 400;
-        line-height: 14px; /* 58.333% */
-
-    }
-    .nav{
-        display: flex;
-        gap: 3rem;
-        justify-content:space-around;
-        align-items: center;
-
-    }
-    .sign{
-        display: flex;
-        gap: 1rem;
-       margin-left: 20vw;
-    }
-    nav{
-        border-radius: 10px;
-        width: fit-content;
-        padding: 0.5em;
-        background-color:white;
-        display:flex;
-        margin: 1rem auto;
-        position:sticky;
-        top:0px;
-        
-    }
-    .btn1 ,.btn2{
-        display: inline-flex;
-        height: 55px;
-        justify-content: center;
-        align-items: center;
-        flex-shrink: 0;
-        border-radius:5px;
-    }
-    .btn2{
-        border: 0px ;
-        background-color: white;
-    }
-    .btn1{
-        border-radius: 6px;
-        background: var(--Primary, #060640);
-    }
-    .btn_a{
-        color: white;
-    }
-    .btn2-a{
-        color:black;
-    }
-body{
-    height: 2000px;
-}
-
-</style>
 <body>
     <nav>
+        <img src="front/static/app/images/Logo_14.png" alt="">
         <div class="nav">
-         <a href="#">home</a> 
-        <a href="#">about</a>
-        <a href="#">courses</a>
-        <a href="#">support</a>
+         <a href="#">Home</a> 
+        <a href="#">About</a>
+        <a href="#">Courses</a>
+        <a href="#">Contact Us</a>
         </div>
         <div class="sign">
             <button class="btn2">
@@ -81,6 +85,8 @@ body{
             <button class="btn1">
                 <a href="#" class="btn_a">sign up</a>
          </button>
+         <!-- <a href=""><img src="../../images/profile.PNG" alt="setting"></a>
+         <a href=""><img src="../../images/profile.PNG" alt="profile"></a> -->
         </div>
      </nav>
 </body>
