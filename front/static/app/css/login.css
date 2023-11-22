@@ -68,6 +68,7 @@ input{
 
 }
 .login-btn{
+    margin-top: 1rem;
     border: none;
     color: #FFF;
     font-family: Blinker;
