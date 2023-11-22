@@ -138,7 +138,12 @@ input{
     .element2{
       display: none;
     }
-  
+
+    
+.container{
+   
+   min-height: 60vh;
+}
 
  input, .login-btn{
     width: 40vw;
