@@ -1,1 +1,52 @@
 
+
+
+.container-fluid{
+  width:100%;
+}
+
+
+h5{
+  width: 100vw;
+}
+h1{
+  width: 100vw;
+ left: 50%;
+}
+.c-item{
+  width: 100vw;
+  height: 90vh;
+}
+
+h5{
+  width: 100vw;
+}
+h1{
+  width: 100vw;
+ left: 50%;
+}
+
+.carousel{
+  
+  width: 100vw;
+  height:auto;
+}
+.card{
+  width: 25vw;
+  height: 35vh;
+  top:20%;
+}
+.card-body{
+  background: #ffffff;
+  width: 25vw;
+  height: 35vh;
+}
+.col{
+  width: 35vw;
+  
+}   
+.row{
+  width: 100vw;
+  height: 90vh;
+}  
+    
