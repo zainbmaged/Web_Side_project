@@ -1,0 +1,145 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #D7E7FF;
+    
+  
+}
+
+
+.container{
+   
+    min-height: 70vh;
+    height: auto;
+    width: 60vw;
+    display: flex;
+    box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+img{
+    width: 100%;
+    height: 100%;
+    
+
+}
+
+.element1{
+    flex:1;
+    background: linear-gradient(153deg, #DEC4FC 1.34%, #91C6FC 96.22%);
+    display: flex;
+    flex-direction: column;
+  
+    align-items: center;
+}
+
+.element2{
+    flex: 1;
+    
+}
+
+
+.input-form{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+input{
+    border: none;
+    width: 20vw;
+    height: 6vh;
+    margin-bottom: 1.3rem;
+    border-radius: 4.1875rem;
+    background: #FFF;
+    box-shadow: 0px 3px 6px 1px rgba(255, 255, 255, 0.05);
+
+
+}
+
+
+
+.Facebook, .twitter{
+    border-radius: 4.8125rem;
+    background: #35A6EF;
+    width: 9vw;
+    height: 4vh;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+    border: none;
+    font-size: 0.875rem;
+}
+.twitter{
+    background: #5073B5;
+   }
+.div-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.font-style{
+
+    color: #ffffff;
+    font-family: Blinker;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.login-btn{
+    margin-top: 1rem;
+    border: none;
+    color: #FFF;
+     width: 20vw;
+    height: 6vh;
+    border-radius: 4.8125rem;
+    background: #6A74CF;
+    box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.login{
+   
+    margin: 3rem;
+    font-size: 1.5rem;
+    font-weight: 600;
+    
+}
+.forget{
+    margin-top: 2rem;
+   
+
+}
+
+/* al tarteb mohm dont change it */
+.connect{
+    color: #7A7A7A;
+    
+
+}
+.font-size{
+    font-size: 0.75rem;
+}
+@media only screen and (max-width: 900px) {
+
+   
+    .element2{
+      display: none;
+    }
+
+    
+.container{
+   
+   min-height: 60vh;
+}
+
+ input, .login-btn{
+    width: 40vw;
+    height: 4vh;
+ }
+ .Facebook, .twitter{
+    width: 20vw;
+ }
+} 
