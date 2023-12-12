@@ -10,6 +10,5 @@ def home(request):
 def register(request):
     return render(request, 'app/register.html')
 
-class UserProfileView(View):
-    def get(self, request):
-        return render(request, "app/UserProfile.html")
+def userprofile(request):
+    return render(request, "app/UserProfile.html")
