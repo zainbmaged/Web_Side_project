@@ -11,6 +11,6 @@ class Instructor(models.Model):
 class User(models.Model):
     ID = models.IntegerField(primary_key=True)
     Profile_Picture = models.ImageField(upload_to='PPimages')
-    Email = 
-    Password = 
-    Name = 
+    Email = models.CharField(max_length=100)
+    Password = models.CharField(max_length=10)
+    Name = models.CharField(max_length=100)
