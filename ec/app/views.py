@@ -12,3 +12,7 @@ def register(request):
 
 def userprofile(request):
     return render(request, "app/UserProfile.html")
+
+def login(request):
+    return render(request, "app/login.html")
+
