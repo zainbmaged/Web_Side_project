@@ -4,6 +4,9 @@ from django.http import HttpResponse
 from django.views import View
 # Create your views here. (front end pages)
 
+def base(request):
+    return render(request,"app/base.html")
+
 def home(request):
     return render(request,"app/index.html")
 
