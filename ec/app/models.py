@@ -25,7 +25,6 @@ class Course(models.Model):
     url = models.URLField(max_length=1000)
     level = models.CharField(max_length=300)
     total_hours = models.DecimalField(max_digits=10, decimal_places=2)
-    # should type be changed as its reserved word?
     type = models.CharField(max_length=500) 
     price = models.DecimalField(max_digits=10, decimal_places=2)
     description =  models.TextField()
