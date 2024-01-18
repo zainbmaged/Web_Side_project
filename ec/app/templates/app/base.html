@@ -3,16 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-<link rel="stylesheet" href="../../static/app/css/base.css">    
+    <title>{% block title %}{% endblock title%}</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="../../static/app/css/base.css"> 
+
 </head>
 <body>
     <img src="../../static/app/images/Logo_14.png" alt="logo" class="logo">
     <nav>
         <div class="nav">
-        <a href="#" class=" option active" >Home</a> 
+        <a href="home" class=" option active" >Home</a> 
         <a href="UserProfile" class="option">My Profile</a>
-        <a href="#" class="option">Courses</a>
+        <a href="courses" class="option">Courses</a>
         <a href="#" class="option">Contact Us</a>
         </div>
         <div class="sign">
@@ -22,15 +27,14 @@
             <button class="btn1">
                 <a href="register" class="btn_a">sign up</a>
          </button>
-         <!-- <a href=""><img src="../../images/profile.PNG" alt="setting"></a>
-         <a href=""><img src="../../images/profile.PNG" alt="profile"></a> -->
+        </div>
+        <div class="account">
+            <a href="" class="profilelogo"><img src="../static/app/images/notification.png" alt="profile" style=" border-radius: 50px; width: 1.5em; height: 1.5em;"></a>
+            <a href="" class="profilelogo"><img src="../static/app/images/profile.jpg" alt="profile" style=" border-radius: 50px; width: 1.7em; height: 1.7em;"></a>
         </div>
      </nav>
-
-     
-     {% block banner-slider %}{% endblock banner-slider %}
+     {% block courses-section %}{% endblock courses-section%}
      {% block main-content %}{% endblock main-content%}
-     {% block bottom-content %}{% endblock bottom-content%}
 
 
 

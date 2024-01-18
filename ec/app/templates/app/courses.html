@@ -1,18 +1,19 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block title %}Courses{% endblock title%}
+
+{% block courses-section %}
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../static/app/css/courses.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="../../static/app/css/courses.css">   
 </head>
 <body>
+    
     <div class="cover">
-    <div class="for_u"><h1>you may like:</h1></div>
-    <div class="search_header"><input type="text"class="search"><img src="../../static/app/images/image 69.png" alt="" style="height: 4vh; width:2vw ;margin-top: 2vh;margin-left: 5px;"></div>
     <div class="filter">
         <fieldset>
             <legend>Category</legend>
@@ -25,8 +26,16 @@
             <input type="checkbox" name="1">
             <label for="1">third</label>
             <br>
+            <input type="checkbox" name="1">
+            <label for="1">first</label>
+            <br>
+            <input type="checkbox" name="1">
+            <label for="1">second</label>
+            <br>
+
 
         </fieldset>
+        
         <fieldset>
             <legend>Level</legend>
             <input type="checkbox" name="1">
@@ -38,6 +47,13 @@
             <input type="checkbox" name="1">
             <label for="1">third</label>
             <br>
+            <input type="checkbox" name="1">
+            <label for="1">first</label>
+            <br>
+            <input type="checkbox" name="1">
+            <label for="1">second</label>
+            <br>
+
 
         </fieldset>
         <fieldset>
@@ -51,6 +67,13 @@
             <input type="checkbox" name="1">
             <label for="1">third</label>
             <br>
+            <input type="checkbox" name="1">
+            <label for="1">first</label>
+            <br>
+            <input type="checkbox" name="1">
+            <label for="1">second</label>
+            <br>
+
 
         </fieldset>
         <fieldset>
@@ -64,6 +87,13 @@
             <input type="checkbox" name="1">
             <label for="1">third</label>
             <br>
+            <input type="checkbox" name="1">
+            <label for="1">first</label>
+            <br>
+            <input type="checkbox" name="1">
+            <label for="1">second</label>
+            <br>
+
 
         </fieldset>
         <fieldset>
@@ -77,6 +107,13 @@
             <input type="checkbox" name="1">
             <label for="1">third</label>
             <br>
+            <input type="checkbox" name="1">
+            <label for="1">first</label>
+            <br>
+            <input type="checkbox" name="1">
+            <label for="1">second</label>
+            <br>
+
 
         </fieldset>
         <fieldset>
@@ -90,11 +127,22 @@
             <input type="checkbox" name="1">
             <label for="1">third</label>
             <br>
+            <input type="checkbox" name="1">
+            <label for="1">first</label>
+            <br>
+            <input type="checkbox" name="1">
+            <label for="1">second</label>
+            <br>
+
 
         </fieldset>
     </div>
     <div class="courses">
+<img src="../../static/app/images/image 69.png" alt="" style="height: 2.5vh; width:1.25vw ;float: right;">
+
     </div>
     </div>
-</body>
+    </body>
 </html>
+
+{% endblock courses-section%}
