@@ -6,11 +6,9 @@ a{
 }
 .nav{
     display: flex;
-    gap: 3rem;
     justify-content:space-around;
     align-items: center;
     gap: 6rem;
-
 }
 .sign{
     display: flex;
@@ -27,9 +25,9 @@ nav{
     position:sticky;
     top:0px;
     z-index: 10;
-
-    
+    height: fit-content;
 }
+
 .btn1 ,.btn2{
     display: inline-flex;
     height: 55px;
@@ -113,7 +111,7 @@ p{
 }
 
 body{
-    height: fit-content;
+height: fit-content;
 }
 
 .account{

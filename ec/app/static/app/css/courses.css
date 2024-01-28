@@ -1,30 +1,27 @@
 .cover{
     display: grid;
-    grid-template-areas:
-    "filter courses"
-    "filter courses"
-    "filter courses"
-    "filter courses" ;
+    grid-auto-columns: 5fr 2fr auto;
+    gap: 0px;
 }
 
 .courses{
-    grid-area: courses;
-    padding-right: 10px;
+    width: 86vw;
 }
 .filter{
-    grid-area: filter;
-    height: 700px;
+    height: 78vh;
     overflow: auto;
-    width: 12vw;
-    position: fixed;
-    top:5px
+    margin-top: -60px ;
+    width: fit-content;
 }
 
 footer{
     width: 100%;
     position: fixed;
     bottom: 0px;
+    grid-area: footer;
+    height:10px;
 }
+
 
 .sign{
     display: none;
@@ -53,3 +50,24 @@ fieldset{
 }
 
 
+.hidden{
+    /* grid-area: more-less; */
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    /* margin-top: -650px; */
+    border: 0px;
+    /* margin-left: 0vw; */
+}
+
+
+nav{
+    grid-area: nav;
+    
+
+}
+
+a{
+    font-size: 1em;
+}
