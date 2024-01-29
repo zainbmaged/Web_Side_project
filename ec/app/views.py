@@ -7,6 +7,9 @@ from django.views import View
 def base(request):
     return render(request,"app/base.html")
 
+def courses(request):
+    return render(request,"app/courses.html")
+
 def home(request):
     return render(request,"app/index.html")
 

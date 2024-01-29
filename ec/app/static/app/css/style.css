@@ -43,6 +43,7 @@ h1{
   height: 35vh;
   
 }
+
 .col{
   width: 35vw;
   
@@ -52,3 +53,6 @@ h1{
   height: 90vh;
 }  
     
+.account{
+  display: none !important;
+}

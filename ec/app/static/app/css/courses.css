@@ -1,49 +1,73 @@
 .cover{
     display: grid;
-    grid-template-areas:
-    "for_u for_u for_u for_u for_u for_u for_u" 
-    "for_u for_u for_u for_u for_u for_u for_u" 
-    "filter search_header search_header search_header search_header search_header search_header"
-    "filter courses courses courses courses courses courses"
-    "filter courses courses courses courses courses courses"
-    "filter courses courses courses courses courses courses" ;
+    grid-auto-columns: 5fr 2fr auto;
+    gap: 0px;
 }
-.for_u{
-    grid-area: for_u;
-    height: 50vh;
-}
-.search_header{
-    grid-area: search_header;
-    height: 8vh;
-    background-color:#8BADD9;
-    margin-top: 8px;
-    display: flex;
-    justify-content: center;
 
-}
 .courses{
-    grid-area: courses;
-    height: 100vh;
+    width: 86vw;
 }
 .filter{
-    grid-area: filter;
-    height: 110vh;
+    height: 78vh;
+    overflow: auto;
+    margin-top: -60px ;
+    width: fit-content;
 }
-.search{
-    background-color: white;
-    height: 5vh;
-    margin-top: 1.5vh;
-    border-radius: 15px;
-    width: 50%;
-    border: 0;
+
+footer{
+    width: 100%;
+    position: fixed;
+    bottom: 0px;
+    grid-area: footer;
+    height:10px;
 }
-h1{
-    color: #EBC4E3;
-    font-family: 'Kdam Thmor Pro', sans-serif;      
+
+
+.sign{
+    display: none;
 }
+
 legend{
-    color:#8BADD9;
+    color:#4e4ed2;
     font-family: monospace;
     font-weight: 700;
-    font-size: larger;
+    font-size: 1.2em;
+    box-shadow: 3px 3px 10px 1px rgba(160, 161, 167, 0.994) inset;
+}
+
+label{
+    font-size: 1em;
+
+}
+fieldset{
+    border-left: 1px solid black;
+    padding-left: 4px;
+    /* background-color: #e2cefb; */
+}
+
+.logo{
+    display: none;
+}
+
+
+.hidden{
+    /* grid-area: more-less; */
+    font-weight: 900;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+    /* margin-top: -650px; */
+    border: 0px;
+    /* margin-left: 0vw; */
+}
+
+
+nav{
+    grid-area: nav;
+    
+
+}
+
+a{
+    font-size: 1em;
 }

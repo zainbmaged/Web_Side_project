@@ -2,26 +2,23 @@
 {% load static %}
 {% block title %}Home{% endblock title%}
 
+{% block main-content %}
 
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Home</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
-    <link rel="stylesheet" href="../../static/app/css/style.css">
-  </head>
- {% block banner-slider %}
-
-      <!-- sliding banner %%--> 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="../../static/app/css/style.css">
+</head>
+<body>
+  
     <div id="carouselExampleAutoplaying" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-inner">
           <div class="carousel-item active c-item">
             <img src=" {%static 'app/images/course.png' %}" class="d-block w-100" alt="...">
             <div style="width: 100%; height: 80%; position: absolute;text-align: center;left: 10px;"class="carousel-caption top-0 d-none d-md-block">
-                <h1 class =."display-1 fw-bolder text-caitalize"> Course Connect</h1>
+                <h1 class ="display-1 fw-bolder text-caitalize"> Course Connect</h1>
                 
               </div>
           </div>
@@ -49,19 +46,16 @@
       </div>
 
 
-{% endblock banner-slider %}
 
 
-{% block main-content %}
-<head>
+<!-- <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Home</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
   <link rel="stylesheet" href="../../static/app/css/style.css">
-</head>
+</head> -->
 
-<! –– about us %% -->    
 
 <div class="row conter">
 
@@ -117,9 +111,8 @@
     </div>
   </div>
   
-  <br><br>
-  <br><br>
-  <! –– top rated courses %% -->
+  <!-- <br><br>
+  <br><br> -->
 
 
 
@@ -214,11 +207,8 @@
   
     </div>
   </div>
-  {% endblock main-content%}
 
-<! –– world map %% -->
 
-{% block bottom-content %}
 
 <div class="row conter">
   <img style="width: 5%; left: 47%;top:8%;  position: relative" src="../../static/app/images/home1.svg">
@@ -227,6 +217,8 @@
   <img style=" width: 100%;height:70%;  position: relative" src="../../static/app/images/w.png">      
     
 </div>
-{% endblock bottom-content%}
-    
- 
+</body>
+</html>
+
+
+{% endblock main-content%}
