@@ -1,0 +1,210 @@
+/*-- General --*/
+
+.body-container {
+    width: 97.5%;
+    height: 80%;
+    background: #DBDBDB;
+    margin: auto;
+    padding: 5px;
+    position: relative;
+}
+
+.header-container {
+    width: 98%;
+    margin: auto;
+    height: 5.5%;
+}
+
+h2 {
+    font-family: 'Jua', sans-serif;
+}
+
+h3, button {
+    font-family: 'Jockey One', sans-serif;
+}
+
+h4, h5 {
+    font-family: 'Farro', sans-serif;
+}
+
+/*-- Icons --*/
+
+.fa-plus-circle {
+    -webkit-text-fill-color: #F2D9ED;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #000000;
+    font-size: 16px;
+    display: flex;
+    float:inline-end;
+    margin-left: 5px;
+}
+
+.fa-pencil-square-o {
+    -webkit-text-fill-color: #F2D9ED;
+    -webkit-text-stroke: 1px;
+    -webkit-text-stroke-color: #000000;
+    font-size: 16px;
+    display: flex;
+    float:inline-end;
+    margin-left: 5px;
+}
+
+.fa-camera {
+    font-size: 50px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+
+/*-- About Info --*/
+
+.about-info {
+    width: 40%;
+    height: 800px;
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 10px;
+    margin: 10px;
+    position: relative;
+    display: inline-block;
+}
+
+.about-info .about-info-title {
+    position: absolute;
+    height: 22%;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+
+.about-info .about-info-title h3 {
+    position: absolute;
+    transform: translate(18%,400%);
+}
+
+.about-info .edit-profile-btn {
+    position: absolute;
+    top: 97%;
+    left: 50%;
+    transform: translate(-50%, -97%);
+}
+
+.about-info .about-info-options {
+    height: 57%;
+    width: 90%;
+    background-color: #D8D7F6;
+    padding: 2%;
+    border-radius: 15px;
+    position: absolute;
+    top: 75%;
+    left:50%;
+    transform: translate(-50%, -75%);
+}
+
+.about-info .about-info-options .about-info-options-title {
+    padding: 22px;
+}
+
+.username {
+    transform: translate(0%, 350%);
+}
+
+.edit-profile-btn {
+    width: 120px;
+    height: 40px;
+    padding: 5px;
+    background: #8BADDA;
+    border-radius: 10px;
+    border: 1px #AEC0F2 solid;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    display: inline-flex;
+    transition-duration: 0.3s;
+    font-size: x-large;
+    color: #FFFFFF;
+}
+
+.edit-profile-btn:hover {
+    box-shadow: 2px 6px 6px 2px rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+    background-color: #AEC0F2;
+    cursor: pointer;
+}
+
+.edit-profile-btn span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.3s;
+  }
+  
+  .edit-profile-btn span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: -1px;
+    right: -10px;
+    transition: 0.3s;
+  }
+
+  .edit-profile-btn:active {
+    width: 150px;
+  }
+  
+  .edit-profile-btn:active span {
+    padding-right: 30px;
+  }
+  
+  .edit-profile-btn:active span:after {
+    opacity: 1;
+    right: 0;
+  }
+
+/*--Other Info--*/
+.other-info{
+    width: 57%;
+    height: 750px;
+    display: inline-block;
+    transform: translate(0px,-55px);
+}
+
+.other-info .skills {
+    width: 100%;
+    height: 17%;
+    padding: 10px;
+    border-radius: 20px;
+    background-color: #FFFFFF;
+}
+
+.other-info .goals {
+    width: 100%;
+    height: 17%;
+    padding: 10px;
+    margin-top: 95px;
+    border-radius: 20px;
+    background-color:  #FFFFFF;
+}
+
+.other-info .experience {
+    width: 100%;
+    height: 17%;
+    padding: 10px;
+    margin-top: 95px;
+    border-radius: 20px;
+    background-color:  #FFFFFF;
+}
+
+.other-info .my-courses {
+    width: 100%;
+    height: 17%;
+    padding: 10px;
+    margin-top: 95px;
+    border-radius: 20px;
+    background-color:  #FFFFFF; 
+}
+
+/*-- Clear Floating Effect --*/
+
+.clear {
+    clear: both;
+}
