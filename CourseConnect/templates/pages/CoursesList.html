@@ -1,0 +1,72 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block main-content %}
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-10">
+                <div class="card">
+                    <div class="card-body">
+                        <table class="table table-bordered table-striped">
+                            <thead>
+                                <tr>
+                                    <th>ID</th>
+                                    <th>Image</th>
+                                    <th>Title</th>
+                                    <th>Rating</th>
+                                    <th>Level</th>
+                                    <th>Language</th>
+                                    <th>Price</th>
+                                    <th>URL</th>
+                                    <th>Description</th>
+                                    <th>Platform</th>
+                                    <th>Certificate</th>
+                                    <th>Duration</th>
+                                    <th>Learning_Type</th>
+                                    <th>Enrolled</th>
+                                    <th>Reviews</th>
+                                    <th>Last_Updated</th>
+                                    <th>Category</th>
+                                    <th>Instructors</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                {% for course in courses_list %}
+                                    <tr>
+                                        <td>{{ course.id }}</td>
+                                        {% if course.Image %}
+                                            <td>
+                                                <img src="static{{course.Image.url}}" alt="" width="80" height="60">
+                                            </td>
+                                        {% else %}
+                                        <td>
+                                            <img src="{% static 'Images/pictureplaceholder.jpg' %}" alt="" width="80" height="60">
+                                        </td>
+                                        {% endif %}
+                                        <td>{{ course.Title }}</td>
+                                        <td>{{ course.Rating }}</td>
+                                        <td>{{ course.Level }}</td>
+                                        <td>{{ course.Language }}</td>
+                                        <td>{{ course.Price }}</td>
+                                        <td><a href={{course.URL}} target="_blank">{{course.URL}}</a></td>
+                                        <td>{{ course.Description }}</td>
+                                        <td>{{ course.Platform }}</td>
+                                        <td>{{ course.Certificate }}</td>
+                                        <td>{{ course.Duration }}</td>
+                                        <td>{{ course.Learning_Type }}</td>
+                                        <td>{{ course.Enrolled }}</td>
+                                        <td>{{ course.Reviews }}</td>
+                                        <td>{{ course.Last_Updated }}</td>
+                                        <td>{{ course.Category }}</td>
+                                        <td>{{ course.Instructors }}</td>
+                                    </tr>
+                                {% endfor %}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock main-content %}

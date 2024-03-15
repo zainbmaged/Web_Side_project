@@ -1,0 +1,45 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}{% endblock title %}</title>
+    <link href="https://fonts.googleapis.com" rel="preconnect">
+    <link href="https://fonts.gstatic.com"  rel="preconnect" crossorigin>
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="{% static 'CSS/base.css' %}">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+</head>
+<body>
+    <nav>
+        <div class="nav">
+            <a href="{% url 'homepage' %}"><img src="{% static 'Images/Logo_14.png' %}" alt="logo" class="logo"></a>
+            <a href="{% url 'homepage' %}" class="option active">Home</a> 
+            <a href="#" class="option">Recommendation</a>
+            <a href="{% url 'allcourses' %}" class="option">Courses</a>
+            <!-- > <a href="#" class="option">About Us</a> <!-->
+        </div>
+        <div class="sign">
+            <button class="btn2">
+                <a href="{% url 'login' %}" class="btn2-a">Sign In</a>
+            </button>
+            <button class="btn1">
+                <a href="{% url 'register' %}" class="btn_a">Sign Up</a>
+            </button>
+        </div>
+        <div class="account">
+            <a href="#" class="profilelogo"><img src="{% static 'Images/notification.png' %}" alt="profile" style=" border-radius: 50px; width: 1.5em; height: 1.5em;"></a>
+            <a href="{% url 'userprofile' %}" class="profilelogo"><img src="{% static 'Images/profile.jpg' %}" alt="profile" style=" border-radius: 50px; width: 1.7em; height: 1.7em;"></a>
+        </div>
+     </nav>
+
+     {% block courses-section %}{% endblock courses-section %}
+     {% block main-content %}{% endblock main-content %}
+
+    <footer>      
+        <img src="{% static 'Images/Logo_14.png' %}" alt="Logo" class="logo_foot">
+        <p>CourseConnect, connect your courses.</p>
+    </footer>
+</body>
+</html>
