@@ -15,12 +15,17 @@
     <div class="container">
         <div class="element1">
          <p class="login font-style ">Login</p>
-         <form action="POST" class="input-form">
-            <input type="text">
-            <input type="text">
-            <button type="submit" class="login-btn font-style font-size">Login</button>
+         {% for message in messages %}
+            <h5 style="color:red; position:absolute;top: 420px; left: 420px;">{{message}}</h5>
+            {% endfor %}
+         <form action="login" method="POST" class="input-form">
+            {% csrf_token %}
+            <input style = "text-align: center;" type="text" placeholder="Email" name = email>
+            <input style = "text-align: center;" type="password" placeholder="password" name = "password"> 
+           <!-- <button type="submit" class="login-btn font-style font-size">Login</button> -->
+            <input class="login-btn font-style font-size" type="submit" value="Login">
          </form>
-         <p class="forget font-style font-size">Forget your password?</p>
+         <a href = "{% url 'reset_password' %}" class="forget font-style font-size">Forget your password?</a>
          <p class="connect font-style font-size">or connect with</p>
          <div class="div-buttons">
             <button class="Facebook font-style">
@@ -30,7 +35,7 @@
                 Twitter
             </button>
          </div>
-         <p class="signup font-style font-size">Don’t have account? Sign up </p>
+         <a  href = "\register" class="signup font-style font-size">Don’t have account? Sign up </a>
          
         </div>
 

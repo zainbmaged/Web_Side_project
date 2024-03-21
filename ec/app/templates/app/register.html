@@ -19,15 +19,19 @@
             <a  href = "https://www.facebook.com/"class="v248_148">Facebook</a>
             <!-- <div class="v248_149"></div><span class="v248_150">Facebook</span><span class="v248_151">Twitter</span> -->
             <a class="v248_149" href = "https://twitter.com/i/flow/login"> Twitter </a>
-            <span class="v248_152">or connect with</span><span class="v248_153">Already have an account? <a href = ""> sign in </a> </span>
+            <span class="v248_152">or connect with</span><span class="v248_153">Already have an account? <a href = "/login"> sign in </a> </span>
             <!-- href needs a value in the above line for the link of sign in page-->
             <div class="v248_154">   <div class="v248_155"></div><span class="v248_156">f</span></div>
             <div class="v248_157"></div>
             <div class="v248_158"></div>  <!--Background style -->
-                <form>
-                    <input class = "v248_159" type = "text" placeholder="Email">
-                    <input class = "v248_160" type = "password" placeholder="password">
-                    <input class="v248_178" type = "password" placeholder="Confirm password">
+            {% for message in messages %}
+            <h5 style="color:red; position:absolute;top: 580px; left: 365px;">{{message}}</h5>
+            {% endfor %}
+                <form method="POST" action = "register">
+                    {% csrf_token %}
+                    <input class = "v248_159" type = "text" placeholder="Email" name = "email">
+                    <input class = "v248_160" type = "password" placeholder="password" name = "password">
+                    <input class="v248_178" type = "password" placeholder="Confirm password" name = "password2">
                     <input class="v248_186" type="submit" value="Register">
                 </form>
                 <!-- </span> -->
