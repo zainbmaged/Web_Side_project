@@ -5,41 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{% block title %}{% endblock title %}</title>
+    <!-- Fonts -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com"  rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Farro:wght@500&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Jockey+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Kdam+Thmor+Pro&display=swap" rel="stylesheet">
     <!-- CSS Files -->
-    <link rel="stylesheet" href="{% static 'CSS/base.css' %}">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous"> 
+    <link href="{% static 'CSS/styles.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.7/css/all.css">
+    <link href="{% static 'CSS/style_userprofile.css' %}" rel="stylesheet" >
+    <link href="{% static 'CSS/base.css' %}" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="shortcut icon" type="image/png" href="{% static 'Images/favicon.ico' %}">
 </head>
 <body>
-    <nav>
-        <div class="nav">
-            <a href="{% url 'homepage' %}"><img src="{% static 'Images/Logo_14.png' %}" alt="logo" class="logo"></a>
-            <a href="{% url 'homepage' %}" class="option active">Home</a> 
-            <a href="#" class="option">Recommendation</a>
-            <a href="{% url 'allcourses' %}" class="option">Courses</a>
-            <!-- > <a href="#" class="option">About Us</a> <!-->
-        </div>
-        <div class="sign">
-            <button class="btn2">
-                <a href="{% url 'login' %}" class="btn2-a">Sign In</a>
-            </button>
-            <button class="btn1">
-                <a href="{% url 'register' %}" class="btn_a">Sign Up</a>
-            </button>
-        </div>
-        <div class="account">
-            <a href="#" class="profilelogo"><img src="{% static 'Images/notification.png' %}" alt="profile" style=" border-radius: 50px; width: 1.5em; height: 1.5em;"></a>
-            <a href="{% url 'userprofile' %}" class="profilelogo"><img src="{% static 'Images/profile.jpg' %}" alt="profile" style=" border-radius: 50px; width: 1.7em; height: 1.7em;"></a>
-        </div>
-     </nav>
-
-     {% block courses-section %}{% endblock courses-section %}
-     {% block main-content %}{% endblock main-content %}
-
-    <footer>      
-        <img src="{% static 'Images/Logo_14.png' %}" alt="Logo" class="logo_foot">
-        <p>CourseConnect, connect your courses.</p>
+    {% include 'navbar.html' %}
+    <br>
+    {% if messages %}
+        {% for msg in messages %}
+            <div class="alert alert-{{ msg.tags }}">{{ msg }}</div>
+        {% endfor %}
+    {% endif %}
+    {% block content %}
+    {% endblock %}
+    <!--Footer-->
+    <br>
+    <footer class="py-5" style="height: 225px;">      
+        <div><img src="{% static 'Images/Logo_14.png' %}" alt="Logo" class="logo_foot"></div>
+        <div><p>CourseConnect, connect your courses.</p></div>
+        <div><p>Copyright &copy; CourseConnect 2024.</p></div>
     </footer>
 </body>
 </html>

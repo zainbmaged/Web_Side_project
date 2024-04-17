@@ -1,48 +1,49 @@
+{% load static %}
+{% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="static/CSS/login.css">
-    <title>Sign Up</title>
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'Images/favicon.ico' %}">
+    <title>Register | CourseConnect</title>
 </head>
 <body>
     <div class="container">
         <div class="element1">
-         <p class="login font-style ">Register</p>
-         <form action="POST" class="input-form">
-            <input type="text">
-            <input type="text">
-            <button type="submit" class="login-btn font-style font-size">Register</button>
-         </form>
-         <p class="connect font-style font-size">or connect with</p>
-         <div class="div-buttons">
-            <button class="Facebook font-style">
-                Facebook
-            </button>
-            <button class="twitter font-style">
-                Twitter
-            </button>
-         </div>
-         <p class="signup font-style font-size">Already have an account? Sign In</p>
-        </div>
-        <div class="Prefrences">
-            <p class="login font-style ">Select Your Prefrences</p>
-            <div class="modal-box">
-                <div class="sd-multiSelect form-group">
-                  <label for="current-job-role">Choose at least 3 Prefrences</label>
-                  <select multiple id="current-job-role" class="sd-CustomSelect">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
-                    <option value="2">Option 5</option>
-                    <option value="3">Option 6</option>
-                    <option value="4">Option 7</option>
-                    <option value="4">Option 8</option>
-                  </select>
+            <h1  class="border-bottom mb-4">Register</h1>
+            {% for message in messages %}
+                <h5 style="color:red; position:absolute;top: 460px; left: 650px;">{{message}}</h5>
+            {% endfor %}
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="border-bottom mb-4">Register Now!</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <br>
+                <div class="form-group">
+                    <button class="login-btn font-style font-size" type="submit">Sign Up</button>
                 </div>
-              </div>
+            </form>
+            <br>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already Have An Acount? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+                </small>
+            </div>
+            <p class="connect font-style font-size">or connect with</p>
+            <div class="div-buttons">
+                <button class="Facebook font-style">
+                    Facebook
+                </button>
+                <button class="twitter font-style">
+                    Twitter
+                </button>
+            </div>
+            <br>
         </div>
     </div>
 </body>

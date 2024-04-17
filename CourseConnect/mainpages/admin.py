@@ -1,17 +1,23 @@
 from django.contrib import admin
-from . models import Course, Skill
+from . models import Course, Skill, Profile, Review
+from django.contrib.auth.models import User
 
 # Register your models here.
 
-class CourseAdmin(admin.ModelAdmin):
-    pass
+admin.site.register(Course)
+admin.site.register(Skill)
+admin.site.register(Review)
+admin.site.register(Profile)
 
-class SkillAdmin(admin.ModelAdmin):
-    pass
+#Connect Profile and User info
+class ProfileInline(admin.StackedInline):
+    model = Profile
 
-class InstructorAdmin(admin.ModelAdmin):
-    pass
+#Extend the User model
+class UserAdmin(admin.ModelAdmin):
+    model = User
+    field = ["username", "first_name", "last_name", "email"]
+    inlines = [ProfileInline]
 
-admin.site.register(Course, CourseAdmin)
-admin.site.register(Skill, SkillAdmin)
-#admin.site.register(Instructor, InstructorAdmin)
+admin.site.unregister(User)
+admin.site.register(User, UserAdmin)

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}All Reviews | CourseConnect{% endblock title %}
+{% block content %}
+    <br><br><br><br><br>
+    {% for review in reviews %}
+        <center>
+            <h2>Reviewed by <a href="{% url 'user-reviews' review.user.username %}">{{ review.user.first_name }} {{ review.user.last_name }}</a></h2>
+            <h2>For Course <a href="{% url 'course' review.course.id %}">{{ review.course.Title}}</a></h2>
+            <p class="article-content">{{ review.fullreview }}</p>
+            <h2><a class="article-title" href="{% url 'review-detail' review.id %}">{{ review.rating }}</a></h2>
+        </center>
+    {% endfor %}
+{% endblock %}

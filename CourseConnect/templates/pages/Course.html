@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+    <div class="container">
+        <br><br>
+        <div class="card mb-3" style="width: 650px; height: 600px;">
+            {% if course.Image %}
+                <img src="{{ course.Image.url }}" class="img-fluid-rounded-start" alt="..." style="width: 650px; height: 450px;">
+            {% else %}
+                <img src="{% static 'Images/pictureplaceholder.jpg' %}" class="img-fluid rounded-start" alt="..." style="width: 650px; height: 450px;">
+            {% endif %}
+            <div class="col-md-8">
+                <h5 class="card-title">{{ course.Title }}</h5>
+                <div class="card-body">
+                    <p class="card-text">{{ course.Description }}</p>
+                    <br>
+                    <a href="{{course.URL}}" target="_blank">{{ course.id }}</p>
+                </div>
+                <div><a href="{% url 'addreview' course.id %}"><button type="submit" class="btn btn-secondary" id="addreviewbtn">Add Review</button></a></div>
+            </div>
+        </div>
+        <br><br>
+    </div>
+{% endblock %}

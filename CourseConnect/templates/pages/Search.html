@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Search | CourseConnect{% endblock title %}
+
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <br><br>
+                <form method="POST" action="{% url 'search' %}">
+                    {% csrf_token %}
+                    <div class="mb-3">
+                        <input type="text" class="form-control" placeholder="Search Courses" name="searched">
+                    </div>
+                    <br>
+                    <button type="submit" class="btn btn-secondary">Search</button>
+                    <br><br>
+                </form>
+                <br><br><br><br>
+                {% if searched %}
+                    {% for course in searched %}
+                        <br>
+                        <div><a href="{% url 'course' course.id %}">{{ course.Title }}</a></div>
+                        <br>
+                    {% endfor %}
+                {% endif %}
+                <br><br><br><br>
+            </div>
+        </div>
+    </div>
+{% endblock %}
