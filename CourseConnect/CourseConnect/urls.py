@@ -23,6 +23,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('mainpages.urls')),
+    path('accounts/', include('allauth.urls')),
 ]
 
 if settings.DEBUG:

@@ -23,6 +23,31 @@ SECRET_KEY = 'django-insecure-*wv3mh5^d*o%kysqcnf$s=5dp@=*w4k6wjxu6js70fl*0rqw9w
 DEBUG = True
 
 ALLOWED_HOSTS = []
+SITE_ID = 1
+SOCIALACCOUNT_LOGIN_ON_GET = True
+
+AUTHENTICATION_BACKENDS = [
+    # Needed to login by username in Django admin, regardless of `allauth`
+    'django.contrib.auth.backends.ModelBackend',
+
+    # `allauth` specific authentication methods, such as login by email
+    'allauth.account.auth_backends.AuthenticationBackend',
+]
+
+SOCIALACCOUNT_PROVIDERS = {
+    'google': {
+        'SCOPE': [
+            'profile',
+            'email',
+        ],
+        'AUTH_PARAMS': {
+            'access_type': 'online',
+        },
+        'OAUTH_PKCE_ENABLED': True,
+    }
+}
+LOGIN_REDIRECT_URL = 'homepage'
+ACCOUNT_LOOUT_REDIRECT_URL = 'login'
 
 # Application definition
 
@@ -36,6 +61,15 @@ INSTALLED_APPS = [
     'mainpages.apps.MainpagesConfig',
     'crispy_forms',
     'crispy_bootstrap4',
+    'django.contrib.sites',
+    'allauth',
+    'allauth.account',
+    'allauth.socialaccount',
+    #'allauth.socialaccount.providers.facebook',
+    'allauth.socialaccount.providers.google',
+
+    #'social_django', ##
+    #'mainApp',##
 ]
 
 MIDDLEWARE = [
@@ -46,6 +80,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    "allauth.account.middleware.AccountMiddleware",
 ]
 
 ROOT_URLCONF = 'CourseConnect.urls'
@@ -65,6 +100,7 @@ TEMPLATES = [
         },
     },
 ]
+
 
 WSGI_APPLICATION = 'CourseConnect.wsgi.application'
 

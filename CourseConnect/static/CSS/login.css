@@ -70,6 +70,7 @@ input{
     box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
     border: none;
     font-size: 0.875rem;
+    padding-left: 700px;
 }
 .twitter{
     background: #5073B5;
