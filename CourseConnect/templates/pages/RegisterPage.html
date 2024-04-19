@@ -2,6 +2,7 @@
 {% load crispy_forms_tags %}
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,12 +11,13 @@
     <link rel="shortcut icon" type="image/png" href="{% static 'Images/favicon.ico' %}">
     <title>Register | CourseConnect</title>
 </head>
+
 <body>
     <div class="container">
         <div class="element1">
-            <h1  class="border-bottom mb-4">Register</h1>
+            <h1 class="border-bottom mb-4">Register</h1>
             {% for message in messages %}
-                <h5 style="color:red; position:absolute;top: 460px; left: 650px;">{{message}}</h5>
+            <h5 style="color:red; position:absolute;top: 460px; left: 650px;">{{message}}</h5>
             {% endfor %}
             <form method="POST">
                 {% csrf_token %}
@@ -34,17 +36,26 @@
                     Already Have An Acount? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
                 </small>
             </div>
-            <p class="connect font-style font-size">or connect with</p>
+            <p class="connect font-style font-size" style = "margin-right: 35px">or connect with</p>
             <div class="div-buttons">
-                <button class="Facebook font-style">
+                {% load socialaccount %}
+                <script src="//accounts.google.com/gsi/client" async></script>
+                {% if user.is_authenticated %}
+                <p>Welcome, You are logged in as {{ user.username }}</p>
+                {% else %}
+                <a href="{% provider_login_url 'google' %}">
+                    <button class="Facebook font-style" style = "margin-right: 35px">
+                        Google
+                    </button>
+                </a>
+                {% endif %}
+                <!--<button class="twitter font-style">
                     Facebook
-                </button>
-                <button class="twitter font-style">
-                    Twitter
-                </button>
+                </button>-->
             </div>
             <br>
         </div>
     </div>
 </body>
+
 </html>
