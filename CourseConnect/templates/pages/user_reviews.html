@@ -1,6 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}{{ view.kwargs.username }} Reviews | CourseConnect{% endblock title %}
+{% block title %}{{ view.kwargs.username }} Reviews{% endblock title %}
 {% block content %}
     <h1 class="mb-3" style="margin-left: 20px;">Reviews By {{ view.kwargs.username }} ({{ page_obj.paginator.count }})</h1>
     <center>
