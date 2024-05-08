@@ -168,6 +168,7 @@ class Profile(models.Model):
     #skill = models.ForeignKey(Skill, on_delete=models.CASCADE, null=True)
     #liked = models.ForeignKey(Like, on_delete=models.CASCADE, null=True)
     review = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
+    takenCourses = models.ManyToManyField(Course)
 
     def __str__(self):
         return f"{self.user.username} Profile"
