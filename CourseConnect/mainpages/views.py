@@ -7,6 +7,7 @@ from django.db.models.query import QuerySet
 from django.shortcuts import render, redirect, get_object_or_404
 from django.urls import reverse
 from urllib.parse import urlencode
+from django.core.paginator import Paginator
 from django.views import View
 from django.views.generic import ListView, DetailView, CreateView, UpdateView, DeleteView
 from django.db.models import Q
@@ -32,7 +33,7 @@ def course(request, pk):
 
 def allcourses(request):
     courses = Course.objects.all()
-    return render(request, 'pages/courses.html', { 'courses': courses })
+    return render(request, 'pages/courses.html', {'courses': courses})
 
 def courses(request):
     if request.method == 'POST':
@@ -48,7 +49,10 @@ def category(request, foo):
     try:
         category = Skill.objects.get(Type=foo)
         courses = Course.objects.filter(Skill=category)
-        context = {'courses': courses, 'category': category}
+        paginated = Paginator(courses, 150)
+        page_number = request.GET.get('page') #Get the requested page number from the URL
+        page = paginated.get_page(page_number)
+        context = {'courses': courses, 'category': category, 'page': page}
         return render(request, 'pages/Category.html', context)
     except:
         messages.success(request, ("Sorry, this category does not exist."))
@@ -223,11 +227,22 @@ class CourseListView(ListView):
     paginate_by = 50
 
 
-class ReviewListView(ListView):
+class ReviewListView(LoginRequiredMixin, ListView):
     model = Review
     template_name = 'pages/AllReviews.html'
     context_object_name = 'reviews'
     ordering = ['-created_at']
+    paginate_by = 10
+
+def rate_course(request):
+    if request.method == "POST":
+        el_id = request.POST.get('el_id')
+        val = request.POST.get('val')
+        review = Review.objects.get(id=el_id)
+        review.rating = val
+        review.save()
+        return JsonResponse({'success':'true', 'rating':val}, safe=False)
+    return JsonResponse({'success':'true'})
 
 class UserReviewListView(LoginRequiredMixin,ListView):
     model = Review

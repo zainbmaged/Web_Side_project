@@ -16,19 +16,22 @@
             {% endfor %}
          <form method="POST" action="{% url 'login' %}" class="input-form">
             {% csrf_token %}
-            <input type="username" name="username" placeholder="Enter Your Username">
-            <input type="password" name="password" placeholder="Enter Your Password">
+            <input type="username" name="username" placeholder="        Enter Your Username">
+            <input type="password" name="password" placeholder="        Enter Your Password">
             <button type="submit" class="login-btn font-style font-size">Login</button>
          </form>
          <a href ="{% url 'reset_password' %}" class="forget font-style font-size" style="color: black; font-size: medium;">Forgotten password?</a>
          <p class="connect font-style font-size">or connect with</p>
          <div class="div-buttons">
-            <button class="Facebook font-style">
-                Facebook
-            </button>
-            <button class="twitter font-style">
-                Twitter
-            </button>
+            <script src="//accounts.google.com/gsi/client" async></script>
+            <div id="g_id_onload"  data-client_id="123-secret.apps.googleusercontent.com" data-login_uri="{% url 'google_login_by_token' %}"></div>
+           
+           <!--    <button type="submit" class="twitter font-style"> Facebook </button>-->
+            {% load socialaccount %}
+         
+            <a href = "{% provider_login_url 'google' %}?next=/">
+                <button type ="submit" class="Facebook font-style" style = "margin-right: 100px" >Google</button>
+            </a>
          </div>
          <p class="signup font-style font-size">Don’t have account? <a href="{% url 'register' %}">Sign Up</a></p>
         </div>

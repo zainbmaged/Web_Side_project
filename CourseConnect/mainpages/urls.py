@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 from django.contrib.auth import views as auth_views
-from . views import ReviewListView, ReviewDetailView, UserReviewListView, ReviewCreateView, ReviewUpdateView, ReviewDeleteView, CourseListView
+from . views import ReviewListView, ReviewDetailView, UserReviewListView, ReviewCreateView, ReviewUpdateView, ReviewDeleteView, CourseListView, rate_course
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
@@ -25,6 +25,7 @@ urlpatterns = [
     path('review/new', ReviewCreateView.as_view(), name='review-create'),
     path('review/<int:pk>/update', ReviewUpdateView.as_view(), name='review-update'),
     path('review/<int:pk>/delete', ReviewDeleteView.as_view(), name='review-delete'),
+    path('rate/', rate_course, name='rate-view'),
     path('allcourses', CourseListView.as_view(), name="allcourses"),
     path('courses', views.courses, name = 'courses'),
     path('reset_password/', auth_views.PasswordResetView.as_view(template_name = 'pages/password_reset.html'), name = "reset_password"),
