@@ -47,12 +47,21 @@ def category(request, foo):
     #Replace hyphens with spaces.
     foo = foo.replace('-', ' ')
     try:
-        category = Skill.objects.get(Type=foo)
-        courses = Course.objects.filter(Skill=category)
-        paginated = Paginator(courses, 150)
+        category = foo.lower()
+        courses1 = Course.objects.filter(Category=foo)
+        courses2 = Course.objects.filter(Category=category)
+        course = list(chain(courses1, courses2))
+        length = len(course)
+        if (10 <= length < 50):
+            pages = Paginator(course, 10)
+        elif (25 < length <= 50):
+            pages = Paginator(course, 25)
+        else:
+            pages = Paginator(course, 50)
         page_number = request.GET.get('page') #Get the requested page number from the URL
-        page = paginated.get_page(page_number)
-        context = {'courses': courses, 'category': category, 'page': page}
+        page = pages.get_page(page_number)
+        courses = page.object_list
+        context = {'courses': courses, 'category': foo, 'page': page, 'length': length}
         return render(request, 'pages/Category.html', context)
     except:
         messages.success(request, ("Sorry, this category does not exist."))
