@@ -1,0 +1,278 @@
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #D7E7FF;
+  
+
+}
+
+
+.container{
+ 
+  min-height: 70vh;
+  height: auto;
+  width: 60vw;
+  display: flex;
+  box-shadow: 10px 10px 10px 1px rgba(0, 0, 0, 0.25);
+}
+
+img{
+  width: 100%;
+  height: 100%;
+  
+
+}
+
+.element1{
+  flex:1;
+  background: linear-gradient(153deg, #DEC4FC 1.34%, #91C6FC 96.22%);
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+}
+
+.element2{
+  flex: 1;
+  
+}
+.Prefrences{
+  background: linear-gradient(153deg, #DEC4FC 1.34%, #91C6FC 96.22%);
+  flex:1;
+  text-align: center;
+
+}
+
+
+
+.input-form{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+
+
+input{
+  border: none;
+  width: 20vw;
+  height: 6vh;
+  margin-bottom: 1.3rem;
+  border-radius: 4.1875rem;
+  background: #FFF;
+  box-shadow: 0px 3px 6px 1px rgba(255, 255, 255, 0.05);
+
+
+
+}
+
+
+
+
+.Facebook, .twitter{
+  border-radius: 4.8125rem;
+  background: #35A6EF;
+  width: 9vw;
+  height: 4vh;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+  border: none;
+  font-size: 0.875rem;
+}
+.twitter{
+  background: #5073B5;
+ }
+.div-buttons{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+}
+
+.font-style{
+
+  color: #ffffff;
+  font-family: Blinker;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+
+.login-btn{
+  margin-top: 1rem;
+  border: none;
+  color: #FFF;
+   width: 20vw;
+  height: 6vh;
+  border-radius: 4.8125rem;
+  background: #6A74CF;
+  box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.login{
+ 
+  margin: 3rem;
+  font-size: 1.5rem;
+  font-weight: 600;
+  
+}
+.forget{
+  margin-top: 2rem;
+ 
+
+}
+
+/* al tarteb mohm dont change it */
+.connect{
+  color: #7A7A7A;
+  
+
+}
+.font-size{
+  font-size: 0.75rem;
+}
+@media only screen and (max-width: 900px) {
+
+ 
+  .element2{
+    display: none;
+  }
+
+  
+.container{
+ 
+ min-height: 60vh;
+}
+
+input, .login-btn{
+  width: 40vw;
+  height: 4vh;
+}
+.Facebook, .twitter{
+  width: 20vw;
+}
+} 
+
+
+:root {
+  --theme-color: #ff7f27;
+  --theme-color-hover: #fc914a;
+  --theme-color2: #000c7b;
+}
+/* Modal Box  */
+
+.modal-box {
+  width: 60%;
+  max-width: 500px;
+  margin: 100px auto;
+}
+
+/* Custom Multi Select */
+.sd-multiSelect {
+  position: relative;
+}
+.sd-multiSelect .placeholder {
+  opacity: 1;
+  background-color: transparent;
+  cursor: pointer;
+}
+.sd-multiSelect .ms-offscreen {
+  height: 1px;
+  width: 1px;
+  opacity: 0;
+  overflow: hidden;
+  display: none;
+}
+
+.sd-multiSelect .sd-CustomSelect {
+  width: 100% !important;
+}
+
+.sd-multiSelect .ms-choice {
+  position: relative;
+  text-align: left !important;
+  width: 100%;
+  border: 1px solid #e3e3e3;
+  background: #ffff;
+  box-shadow: none;
+  font-size: 15px;
+  height: 44px;
+  font-weight: 500;
+  color: #212529;
+  line-height: 1.5;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.sd-multiSelect .ms-choice:after {
+  content: "\f107 ";
+  font-family: "FontAwesome";
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 18px;
+}
+
+.sd-multiSelect .ms-choice:focus {
+  border-color: var(--theme-color);
+}
+
+.sd-multiSelect .ms-drop.bottom {
+  display: none;
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  padding: 10px;
+}
+
+.sd-multiSelect .ms-drop li {
+  position: relative;
+  margin-bottom: 10px;
+}
+
+.sd-multiSelect .ms-drop li input[type="checkbox"] {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.sd-multiSelect .ms-drop li label {
+  cursor: pointer;
+  user-select: none;
+  -ms-user-select: none;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+}
+
+.sd-multiSelect .ms-drop li label:before {
+  content: "";
+  -webkit-appearance: none;
+  background-color: transparent;
+  border: 2px solid var(--theme-color);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05),
+    inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+  padding: 8px;
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.sd-multiSelect .ms-drop li input:checked + span:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 9px;
+  left: 5px;
+  width: 10px;
+  height: 10px;
+  background: var(--theme-color);
+  border-width: 0 2px 2px 0;
+}
