@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Top Recommendations for {{ user.username }}{% endblock title %}
+{% block content %}
+<br>
+<h2>My Recommendations:</h2>
+
+{% for r in recommendation %}
+    <h2>{{ r }}</h2>
+{% endfor %}
+
+{% endblock %}

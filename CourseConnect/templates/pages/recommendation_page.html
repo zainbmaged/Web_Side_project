@@ -1,0 +1,99 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ view.kwargs.username }} Recommendations{% endblock title %}
+{% block content %}
+    <h1 class="mb-3" style="margin-left: 20px;">Recommended to {{ view.kwargs.username }} </h1>
+    <center>
+        
+            <article class="media content-section">
+                
+                <div class="media-body">
+                    <style>
+                        table {
+                            width: 100%;
+                            border-collapse: collapse;
+                        }
+                    
+                        th, td {
+                            padding: 8px;
+                            text-align: left;
+                            border-bottom: 1px solid #ddd;
+                        }
+                    
+                        th {
+                            background-color: #f2f2f2;
+                            font-weight: bold;
+                        }
+                    
+                        tr:hover {
+                            background-color: #f5f5f5;
+                        }
+                    </style>
+                    <table>
+                        <tr>
+                            <th>Title</th>
+                            <th>Rating</th>
+                            <th>Level</th>
+                            <th>Language</th>
+                            <th>Price</th>
+                            <th>URL</th>
+                            <th>rating</th>
+                            <th>Platform</th>
+                            <th>Certificate</th>
+                            <th>Duration</th>
+                            <th>Learning Type</th>
+                            <th>Enrolled</th>
+                            <th>Reviews</th>
+                            <th>Last Updated</th>
+                            <th>Category</th>
+                            <th>Instructors</th>
+                            <th>Skill</th>
+                        </tr>
+                        {% for course in reviews %}
+                        <tr>
+                            <td>{{ course.Title }}</td>
+                            <td>{{ course.Rating }}</td>
+                            <td>{{ course.Level }}</td>
+                            <td>{{ course.Language }}</td>
+                            <td>{{ course.Price }}</td>
+                            <td>{{ course.URL }}</td>
+                            <td>{{ course.rating }}</td>
+                            <td>{{ course.Platform }}</td>
+                            <td>{{ course.Certificate }}</td>
+                            <td>{{ course.Duration }}</td>
+                            <td>{{ course.Learning_Type }}</td>
+                            <td>{{ course.Enrolled }}</td>
+                            <td>{{ course.Reviews }}</td>
+                            <td>{{ course.Last_Updated }}</td>
+                            <td>{{ course.Category }}</td>
+                            <td>{{ course.Instructors }}</td>
+                            <td>{{ course.Skill }}</td> 
+                        </tr>
+                        {% endfor %}
+                    
+                    
+                    
+                </div>
+            </article>
+      
+    </center>
+    {% if is_paginated %}
+        {% if page_obj.has_previous %}
+            <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+        {% endif %}
+
+        {% for num in page_obj.paginator.page_range %}
+            {% if page_obj.number == num %}
+                <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'  %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+            {% endif %}
+        {% endfor %}
+
+        {% if page_obj.has_next %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+            <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+        {% endif %}
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}New Review | CourseConnect{% endblock title %}
+{% block content %}
+    <div class="container">
+        <div class="element1">
+            <h1  class="border-bottom mb-4">Add New Review</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="border-bottom mb-4">Review</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <br><br>
+                <div class="form-group">
+                    <button class="btn btn-outiline-info" type="submit">Add</button>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}

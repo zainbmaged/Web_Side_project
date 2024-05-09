@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ view.kwargs.username }} Courses{% endblock title %}
+{% block content %}
+    <img class="rounded-circle article-img" src="{{ user.profile.image.url }}">
+    <h1 class="mb-3" style="margin-left: 20px;">My Courses:</h1>
+    <center>
+        {% for course in user.profile.takenCourses.all %}
+            <article class="media content-section">
+                <h2 class="article-title">{{ course.Title }}</h2>
+            </article>
+        {% endfor %}
+    </center>
+{% endblock %}

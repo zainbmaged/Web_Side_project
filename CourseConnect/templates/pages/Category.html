@@ -1,0 +1,89 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %} {{ category }} Courses {% endblock title %}
+{% block content %}
+    <div class="container">
+        <h2>{{ category }} ({{ length }})</h2>
+            <table class="table table-bordered table-striped">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Image</th>
+                    <th>Title</th>
+                    <th>Rating</th>
+                    <th>Level</th>
+                    <th>Language</th>
+                    <th>Price</th>
+                    <th>URL</th>
+                    <th>Description</th>
+                    <th>Platform</th>
+                    <th>Certificate</th>
+                    <th>Duration</th>
+                    <th>Learning_Type</th>
+                    <th>Enrolled</th>
+                    <th>Reviews</th>
+                    <th>Category</th>
+                    <th>Instructors</th>
+                    <th>Course</th>
+                </tr>
+                </thead>
+                <tbody>
+                {% for course in courses %}
+                    <tr>
+                        <td>{{ course.id }}</td>
+                        {% if course.Image %}
+                            <td>
+                                <img src="static{{course.Image.url}}" alt="" width="80" height="60">
+                            </td>
+                        {% else %}
+                            <td>
+                                <img src="{% static 'Images/pictureplaceholder.jpg' %}" alt="" width="80" height="60">
+                            </td>
+                        {% endif %}
+                                <td>{{ course.Title }}</td>
+                                <td>{{ course.Rating }}</td>
+                                <td>{{ course.Level }}</td>
+                                <td>{{ course.Language }}</td>
+                                <td>{{ course.Price }}</td>
+                                <td><a href={{course.URL}} target="_blank">{{course.URL}}</a></td>
+                                <td>{{ course.Description }}</td>
+                                <td>{{ course.Platform }}</td>
+                                <td>{{ course.Certificate }}</td>
+                                <td>{{ course.Duration }}</td>
+                                <td>{{ course.Learning_Type }}</td>
+                                <td>{{ course.Enrolled }}</td>
+                                <td>{{ course.Reviews }}</td>
+                                <td>{{ course.Category }}</td>
+                                <td>{{ course.Instructors }}</td>
+                                <td><a href="{% url 'course' course.id %}">View Course</a></td>
+                            </tr>
+                        {% endfor %}
+                    </tbody>
+                </table>
+    <!-- Pagination -->
+    {% if page.has_previous %}
+        <a href="?page={{page.previous_page_number}}" class="btn btn-secondary mx-2">Previous</a>
+    {% endif %}
+
+    <a href="?page=1" class="btn btn-secondary">First</a>
+
+    {% for num in page.paginator.page_range %}
+        {% if num == page.number %}
+            <span>{{ num }}</span>
+        {% else %}
+            <a href="?page={{num}}" class="btn btn-secondary mx-2">
+    {{ num }}
+    </a>
+        {% endif %}
+    {% endfor %}
+
+    <a href="?page={{page.paginator.num_pages}}" class="btn btn-secondary mx-2">
+    Last
+    </a>
+
+    {% if page.has_next %}
+        <a href="?page={{page.next_page_number}}" class="btn btn-secondary mx-2">
+    Next
+    </a>
+    {% endif %}
+{% endblock %}

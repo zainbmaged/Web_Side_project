@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}Delete Review | CourseConnect{% endblock title %}
+{% block content %}
+    <div class="container">
+        <div class="element1">
+            <h1  class="border-bottom mb-4">Delete Review</h1>
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="border-bottom mb-4">Review</legend>
+                    <h2>Are your sure you want to delete the review for"{{ object.course.Title }}"</h2>
+                </fieldset>
+                <br><br>
+                <div class="form-group">
+                    <button class="btn btn-outiline-danger" type="submit">Yes, Delete</button>
+                    <a class="btn btn-outiline-secondary" href="{% url 'review-detail' object.id %}">Cancel</a>
+                </div>
+            </form>
+        </div>
+    </div>
+{% endblock %}
