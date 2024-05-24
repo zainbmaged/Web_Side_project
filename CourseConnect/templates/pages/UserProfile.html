@@ -17,10 +17,9 @@
                 <h5 class="about-info-options-title"><b>Birthdate:</b> {{ user.profile.birthdate }}</h5>
                 <h5 class="about-info-options-title"><b>Language:</b> {{ user.profile.get_language_display }}</h5>
                 <h5 class="about-info-options-title"><b>Gender:</b> {{ user.profile.get_gender_display }}</h5>
-                <center><a  href="{% url 'editprofile' %}"><button class="edit-profile-btn" style="width: 165px;"><span>Edit Profile</span></button></a></center>
+                <center><a href="{% url 'editprofile' %}"><button class="edit-profile-btn" style="width: 165px;"><span>Edit Profile</span></button></a></center>
             </div>  <!-- ./about-info-options -->
         </div>  <!-- ./about-info -->
-    
         <div class="other-info">
             <div class="skills">
                 <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
@@ -31,24 +30,24 @@
                 <h6>Skill 3</h6>
                 <a href="#"><button class="showbtn"><b>Show All</b></button></a>
             </div>  <!-- ./skills -->
-            <div class="goals">
+            <div class="recommendation">
                 <a href="#"><i class="fa fa-plus"></i></a>
                 <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                <h4><b>Goals</b></h4>
-                <h6>Goal 1</h6>
-                <h6>Goal 2</h6>
-                <h6>Goal 3</h6>
-                <a href="#"><button class="showbtn"><b>Show All</b></button></a>
-            </div>  <!-- ./goals -->
-            <div class="experience">
+                <h4><b>Recommendations</b></h4>
+                <h6>Recommendation 1: {{courses.0}}</h6>
+                <h6>Recommendation 2: {{courses.1}}</h6>
+                <h6>Recommendation 3: {{courses.2}}</h6>
+                <a href="{% url 'recommendations' user.username %}"><button class="showbtn"><b>Show All</b></button></a>
+            </div>  <!-- ./recommendations -->
+            <div class="course">
                 <a href="#"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 <a href="#"><i class="fa fa-trash" aria-hidden="true"></i></a>
-                <h4><b>Experiences</b></h4>
-                <h6>Experience 1</h6>
-                <h6>Experience 2</h6>
-                <h6>Experience 3</h6>
-                <a href="#"><button class="showbtn"><b>Show All</b></button></a>
-            </div>  <!-- ./experience -->
+                <h4><b>Courses</b></h4>
+                <h6>Course 1: {{user.profile.takenCourses.all.0}}</h6>
+                <h6>Course 2: {{user.profile.takenCourses.all.1}}</h6>
+                <h6>Course 3: {{user.profile.takenCourses.all.2}}</h6>
+                <a href="{% url 'user-courses' user.username %}"><button class="showbtn"><b>Show All</b></button></a>
+            </div>  <!-- ./course -->
             <div class="reviews">
                 <a href="{% url 'review-create' %}"><i class="fa fa-plus" aria-hidden="true"></i></a>
                 <h4><b>Reviews</b></h4>

@@ -12,9 +12,13 @@
                         <a class="mr-2" href="{% url 'user-reviews' review.user.username %}">{{ review.user.username }}</a>
                         <small class="text-muted">{{ review.created_at|date:"F d, Y" }}</small>
                     </div>
-                    <h2 class="article-title">Review {{ review.id }} for {{ review.course.Title }}</h2>
+                    <h2 class="article-title">Review {{ review.id }} for <a href="{% url 'course' review.course.id %}" style="font-style: none; font-size: 27px; color: black; font-weight: 900px;">{{ review.course.Title }}</a></h2>
                     <h2 class="article-title">{{ review.rating }} Stars</h2>
-                    <p class="article-content" style="color: black;"><b>{{ review.user.first_name }} {{ review.user.last_name }}'s opinion:</b> {{ review.fullreview }}</p>
+                    {% if review.user.first_name %}
+                        <p class="article-content" style="color: black;"><b>{{ review.user.first_name }} {{ review.user.last_name }}'s opinion:</b> {{ review.fullreview }}</p>
+                    {% else %}
+                        <p class="article-content" style="color: black;"><b>{{ review.user.username }}'s opinion:</b> {{ review.fullreview }}</p>
+                    {% endif %}
                 </div>
             </article>
         {% endfor %}

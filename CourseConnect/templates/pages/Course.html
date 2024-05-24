@@ -2,7 +2,6 @@
 {% load static %}
 {% block title %}Course #{{ course.id }} {% endblock title %}
 {% block content %}
-    <br>
     <div class="card mb-5" style="width: 650px; height: 450px;">
         {% if course.Image %}
             <img src="{{ course.Image.url }}" class="img-fluid-rounded-start" alt="..." style="width: 650px; height: 450px;">
@@ -10,7 +9,7 @@
             <img src="{% static 'Images/pictureplaceholder.jpg' %}" class="img-fluid rounded-start" alt="..." style="width: 650px; height: 450px;">
         {% endif %}
     </div>
-    <div class="container>
+    <div class="container">
         <div class="row">
             <div class="col">
                 <h4>{{ course.Title }}</h4>
@@ -25,10 +24,12 @@
                 <a href="{{course.URL}}" target="_blank"><button type="submit" class="btn btn-secondary">Go To Course</button></p>
             </div>
         </div>
-        <br>
+        
+        {% for userCourse in user.profile.takenCourses.all %}
         <div class="row">
-            <div class="col"><a href="{% url 'addreview' course.id %}"><button type="submit" class="btn btn-secondary">Add Review</button></a></div>
+            {% if userCourse.Title == course.Title %}
+                <div class="col"><a href="{% url 'addreview' course.id %}"><button type="submit" class="btn btn-secondary">Add Review</button></a></div>
+            {% endif %}
         </div>
-
-    <br><br><br>
+        {% endfor %}
 {% endblock %}

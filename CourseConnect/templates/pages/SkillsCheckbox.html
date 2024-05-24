@@ -1,0 +1,22 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ user.username }}'s Skills{% endblock title %}
+{% block content %}
+<center>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="checkbox" name="chk[]" value="Computer Science">Computer Science
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Language">Language
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Electrical Engineering">Electrical Engineering
+        <br><br>
+
+
+        <input type="submit" name="btnsubmit" value="Submit" />
+    </form>
+
+    {{key}}
+</center>
+
+{% endblock %}

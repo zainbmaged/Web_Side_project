@@ -1,7 +1,8 @@
 {% load static %}
 <nav>
-    <div class="nav">
-        <a href="{% url 'homepage' %}"><img src="{% static 'Images/Logo_14.png' %}" alt="logo" class="logo" style="width: 10em; height: 5em;"></a>
+    <div class="parent">
+    <div class="nav" id="NavBar">
+        <a href="{% url 'homepage' %}"><img src="{% static 'Images/Logo_14.png' %}" alt="logo" class="logo"></a>
         <a href="{% url 'homepage' %}" class="option">Home</a> 
         <a href="{% url 'allreviews' %}" class="option">Reviews</a>
         <div class="dropdown">
@@ -16,6 +17,17 @@
                 <a href="{% url 'allcourses' %}" class="option2">View All Courses</a>
             </div>
         </div>
+        {% if request.user.is_authenticated  %}
+            <div class="dropdown">
+                <a href="{% url 'recommendations' user.username  %}" class="option">Recommendations</a>
+                <div class="dropdown-content">
+                    {% if user.reviews.all.count >= 10 %}
+                    <a href="{% url  'recommendation_page' user.username %}" class="option2">Personalized Recommendations</a>
+                    {% endif %}
+                    <a href="{% url 'recommendations' user.username %}" class="option2">Similar Courses</a> 
+                </div>
+            </div>
+        {% endif %}
         <style>
             .dropbtn {
                 background-color: white;
@@ -74,6 +86,7 @@
             <a href="{% url 'login' %}" class="option" style="color: black;">Sign In</a>
             <a href="{% url 'register' %}" class="option" style="color: black;">Sign Up</a>
         {% endif %}
+    </div>
     </div>
 </nav>
 
