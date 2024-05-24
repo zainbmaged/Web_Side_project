@@ -80,6 +80,11 @@ input{
   border: none;
   font-size: 0.875rem;
 }
+
+.Facebook:hover {
+  cursor: pointer;
+  background-color: #27a1f1;
+}
 .twitter{
   background: #5073B5;
  }
@@ -102,11 +107,16 @@ input{
   margin-top: 1rem;
   border: none;
   color: #FFF;
-   width: 20vw;
+  width: 20vw;
   height: 6vh;
   border-radius: 4.8125rem;
   background: #6A74CF;
   box-shadow: 0px 3px 4px 0px rgba(0, 0, 0, 0.15);
+}
+
+.login-btn:hover {
+  cursor: pointer;
+  background-color: #6370e7;
 }
 
 .login{
