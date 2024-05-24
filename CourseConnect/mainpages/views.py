@@ -16,8 +16,14 @@ from django.contrib.auth.models import User, auth
 from django import forms
 from . forms import UserRegisterForm, ChangePasswordForm, UserInfoForm, UserUpdateForm, ProfileUpdateForm, UserReviewForm
 from django.http import JsonResponse, HttpResponse
+from itertools import chain
 import json
 import datetime
+##---for recommendation models---##
+import sys
+sys.path.append("..")
+from model import ContentBasedModel, RandomForest
+from django.db.models import F
 
 
 def homepage(request):
@@ -33,13 +39,15 @@ def course(request, pk):
 
 def allcourses(request):
     courses = Course.objects.all()
-    return render(request, 'pages/courses.html', {'courses': courses})
+    context = {'courses': courses}
+    return render(request, 'pages/courses.html', context)
 
 def courses(request):
     if request.method == 'POST':
         inputValue = request.POST['inputValue']
         searched = Course.objects.filter(Q(Title__icontains=inputValue) | Q(Price__icontains=inputValue) | Q(Platform__icontains=inputValue))
-        return render(request, 'pages/courses.html', {'searched': searched, 'inputValue':inputValue})
+        context = {'searched': searched, 'inputValue':inputValue}
+        return render(request, 'pages/courses.html', context)
     else:
         return render(request, 'pages/courses.html')
 
@@ -93,11 +101,15 @@ def register_user(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             if User.objects.filter(email=form.cleaned_data.get('email')).exists():
-               messages.info(request, 'Email Already Exists')
+               messages.info(request, 'Email Already Exists. Please Try Again')
                return redirect('register')
             else:
                 form.save()
                 username = form.cleaned_data.get('username')
+                password = form.cleaned_data.get('password1')
+                user = authenticate(request, username=username, password=password)
+                if user is not None:
+                    login(request, user)
                 messages.success(request, (f"Account created for {username} successfully.\nWelcome!"))
                 return redirect('homepage')
         else:
@@ -105,8 +117,38 @@ def register_user(request):
             return redirect('register')
     else:
         form = UserRegisterForm()
+    
     return render(request, 'pages/RegisterPage.html', {'form': form})
 
+'''
+@login_required
+def profile_skills(request):
+    if request.user.is_authenticated:
+        if request.method == "POST":
+            current = Profile_Skill.objects.create(user_id=request.user.id)
+            form = ProfileSkillForm(request.POST, current)
+            if form.is_valid():
+                form.save(commit=False)
+                form.save_m2m()
+                return redirect('userprofile', foo=request.user.username)
+            else:
+                messages.success(request, ("An error occured. Please try again."))
+                return redirect('pages/SkillsForm.html')
+        else:
+            form = ProfileSkillForm()
+            return render(request, 'pages/SkillsForm.html', {"form":form})
+    else:
+        messages.success(request, ("Please log in first."))
+        return render(request, 'pages/LoginPage.html', {"form":form})
+
+def checkbox(request):
+    if request.method=="POST":
+        s = request.POST.getlist("chk[]")
+        for s1 in s:
+            print(s1)
+        return render(request,"pages/SkillsCheckbox.html", {'key':s})
+    return render(request,"pages/SkillsCheckbox.html")
+'''
 
 @login_required
 def userprofile(request, foo):
@@ -115,7 +157,14 @@ def userprofile(request, foo):
     if request.user.is_authenticated and request.user.username == foo:
         try:
             user = User.objects.get(username=foo)
-            context = {'user': user, 'reviews': Review.objects.filter(user=request.user)}
+            reviews = Review.objects.filter(user=request.user)
+            #takenCourses = user.profile.takenCourses.all().filter()
+            #titles = []
+            #for i in range(len(reviews)):
+            #    titles.append(reviews[i].course.Title)
+            #recommendation = ContentBasedModel.get_recommendations(titles)
+            #courses = Course.objects.filter(Q(Title__in=recommendation)).distinct()
+            context = {'user': user,'reviews': reviews}
             return render(request, 'pages/UserProfile.html', context)
         except:
             messages.success(request, ("Sorry, this profile does not exist."))
@@ -135,7 +184,7 @@ def editprofile(request):
         old_language = request.user.profile.language        
         
         u_form = UserUpdateForm(request.POST, instance=request.user)
-        p_form = ProfileUpdateForm(request.POST, request.FILES, instance=request.user.profile)
+        p_form = ProfileUpdateForm(request.POST, instance=request.user.profile)
         
         if u_form.is_valid() and p_form.is_valid():
             new_email = u_form.cleaned_data.get('email')
@@ -265,7 +314,7 @@ class UserReviewListView(LoginRequiredMixin,ListView):
     
     def test_func(self):
         review = self.get_object()
-        if self.request.user == review.user:
+        if self.request.user == review.user and review.course.Title in review.user.profile.takenCourses.all().filter():
             return True
         return False
     
@@ -294,7 +343,10 @@ class ReviewUpdateView(LoginRequiredMixin, UserPassesTestMixin, UpdateView):
     
     def test_func(self):
         review = self.get_object()
-        if self.request.user == review.user:
+        user = self.request.user
+        course = review.course
+        takenCourses = user.profile.takenCourses.all().filter()
+        if self.request.user == review.user and course in takenCourses:
             return True
         return False
     
@@ -312,7 +364,8 @@ class ReviewDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 def addreview(request, pk):
     course = Course.objects.get(id=pk)
     user = request.user
-    if request.method == 'POST':
+    takenCourses = user.profile.takenCourses.all().filter()
+    if request.method == 'POST' and course in takenCourses:
         review = Review.objects.create(course_id=course.id, user_id=user.id)
         form = UserReviewForm(request.POST, instance=review)
         if form.is_valid():
@@ -329,18 +382,91 @@ def addreview(request, pk):
             return redirect('addreview', pk)
     else:
         form = UserReviewForm()
-    
+        messages.success(request, ("Invalid Review. User didn't take this course."))
+
     context = {'course': course, 'form':form}
     return render(request, 'pages/AddReview.html', context)
 
+class UserCourseListView(LoginRequiredMixin,ListView):
+    model = Profile
+    template_name = 'pages/user_courses.html'
+    context_object_name = 'profile'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
+    def test_func(self):
+        profile = self.get_object()
+        if self.request.user == profile.user:
+            return True
+        return False
+    
+    def get_queryset(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        return Profile.objects.filter(user=user)
+
+
+#---------Content-based Model---------#
+@login_required
+def getRecommendation(request, foo):
+    if request.user.is_authenticated and request.user.username == foo:
+        try:
+            user = User.objects.get(username=foo)
+            userCourses_rated = Review.objects.filter(user=request.user)
+            titles = []
+            for i in range(len(userCourses_rated)):
+                titles.append(userCourses_rated[i].course.Title)
+            recommendation = ContentBasedModel.get_recommendations(titles)
+            courses = Course.objects.filter(Q(Title__in=recommendation)).distinct()
+            context = {'courses': courses, 'user': user, 'takenCourses': titles, 'recommendation': recommendation}
+            return render(request, 'pages/Recommendation.html', context)
+        except:
+            messages.success(request, ("Sorry, this username does not exist."))
+            return redirect('homepage')
+    else:
+        messages.success(request, ("Sorry, you cannot access this page."))
+        return redirect('homepage')
+
+#---------Collaborative Model---------#
+class RecommendationPage(LoginRequiredMixin, ListView):
+    model = Review
+    template_name = 'pages/recommendation_page.html'
+    context_object_name = 'reviews'
+    paginate_by = 5
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
+    
+    def test_func(self):
+        review = self.get_object()
+        if self.request.user == review.user:
+            return True
+        return False
+   
+    def get_queryset(self):
+        user = get_object_or_404(User, username=self.kwargs.get('username'))
+        all_courses = Course.objects.all()
+        label_encoders = RandomForest.define_label_encoders(all_courses)
+      
+        # Query to retrieve course details for the reviewed courses
+        reviewed_courses = Course.objects.filter(review__user=user).annotate(rating = F('review__rating'))
+        # Call the train_random_forest_regressor function
+        regressor = RandomForest.train_random_forest_regressor(reviewed_courses,label_encoders)
+        unrated_courses = Course.objects.exclude(review__user=user)
+        
+        top_rated_courses_decoded = RandomForest.predict_top_rated_courses(unrated_courses, regressor, label_encoders)
+
+        return top_rated_courses_decoded
+
 '''
 def setvalue():
-    skills = Skill.objects.values()
-    for k in range(len(skills)):
-        x = skills[k]['id']
-        categ = skills[k]['Type']
-        courses = Course.objects.filter(Category=categ).values()
-        for course in courses:
-            course.update(Skill_id=x)
-        courses.update()
+    skill = Skill.objects.filter(Type="Math").values()
+    categ = skill[0]['Type']
+    x = skill[0]['id']
+    courses = Course.objects.filter(Category=categ).values()
+    for course in courses:
+       course.update(Skill__id=x)
+    courses.update()
 '''

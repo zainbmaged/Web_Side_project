@@ -42,25 +42,24 @@ class Course(models.Model):
 
 
 class Review(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User,  related_name="reviews", on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
     rating = models.IntegerField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0)])
-    fullreview = models.CharField(max_length=600)
-    created_at = models.DateTimeField(default=timezone.now)
-    updated_at = models.DateTimeField(auto_now=True)
+    fullreview = models.CharField(max_length=600, null=True)
+    created_at = models.DateTimeField(default=timezone.now, null=True)
+    updated_at = models.DateTimeField(auto_now=True, null=True)
 
     def __str__(self):
         return f"Course: {self.course.Title} --> Rating: {self.rating}"
     
     def get_absolute_url(self):
         return reverse('review-detail', kwargs={'pk': self.pk})
-    
 
 
 #Users Profile
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
-    image = models.ImageField(upload_to='Images/profile_pics', default='Images/defaultprofile.jpg', null=True, blank=True)
+    #image = models.ImageField(upload_to='Images/profile_pics', default='Images/defaultprofile.jpg', null=True, blank=True)
     date_modified = models.DateTimeField(User, auto_now=True)
     GENDER_CHOICES = (('M', 'Male'), ('F', 'Female'))
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
@@ -165,14 +164,14 @@ class Profile(models.Model):
  ('zh-hans', 'Simplified Chinese'),
  ('zh-hant', 'Traditional Chinese'))
     language = models.CharField(max_length=7, choices=LANGUAGE_CHOICES, null=True, blank=True)
-    #skill = models.ForeignKey(Skill, on_delete=models.CASCADE, null=True)
     #liked = models.ForeignKey(Like, on_delete=models.CASCADE, null=True)
     review = models.ForeignKey(Review, on_delete=models.CASCADE, null=True)
     takenCourses = models.ManyToManyField(Course)
-
+    skills = models.ManyToManyField(Skill)
+    
     def __str__(self):
         return f"{self.user.username} Profile"
-    
+'''
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         img = Image.open(self.image.path)
@@ -180,6 +179,16 @@ class Profile(models.Model):
             output_size = (350, 350)
             img.thumbnail(output_size)
             img.save(self.image.path)
+'''
+'''
+class Profile_Skill(models.Model):
+    user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
+    skills =  models.ManyToManyField(Skill)
+
+
+    def __str__(self):
+        return f"{self.user.username} has skills: {self.skills}"
+'''   
 
 
 #Users

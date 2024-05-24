@@ -1,5 +1,5 @@
 from django.contrib.auth.models import User
-from django.contrib.auth.forms import UserCreationForm, UserChangeForm, SetPasswordForm
+from django.contrib.auth.forms import UserCreationForm, SetPasswordForm
 from django import forms
 from . models import Profile, Review
 from django.core.validators import MaxValueValidator, MinValueValidator
@@ -52,19 +52,25 @@ class UserRegisterForm(UserCreationForm):
 		super(UserRegisterForm, self).__init__(*args, **kwargs)
 		
 		self.fields['username'].widget.attrs['class'] = 'form-control'
-		self.fields['username'].widget.attrs['placeholder'] = 'User Name'
+		self.fields['username'].widget.attrs['placeholder'] = ' User Name'
 		self.fields['username'].label = ''
 		self.fields['username'].help_text = None
 		
+		self.fields['email'].widget.attrs['class'] = 'form-control'
+		self.fields['email'].widget.attrs['placeholder'] = ' Email'
+		self.fields['email'].label = ''
+		self.fields['email'].help_text = None
+
 		self.fields['password1'].widget.attrs['class'] = 'form-control'
-		self.fields['password1'].widget.attrs['placeholder'] = 'Password'
+		self.fields['password1'].widget.attrs['placeholder'] = ' Password'
 		self.fields['password1'].label = ''
 		self.fields['password1'].help_text = None
 		
 		self.fields['password2'].widget.attrs['class'] = 'form-control'
-		self.fields['password2'].widget.attrs['placeholder'] = 'Confirm Password'
+		self.fields['password2'].widget.attrs['placeholder'] = ' Confirm Password'
 		self.fields['password2'].label = ''
 		self.fields['password2'].help_text = None
+
 
 class UserUpdateForm(forms.ModelForm):
 	email = forms.EmailField(required=False)
@@ -73,24 +79,35 @@ class UserUpdateForm(forms.ModelForm):
 		model = User
 		fields = ['email', 'first_name', 'last_name']
 
-		def __init__(self, *args, **kwargs):
-			super(UserUpdateForm, self).__init__(*args, **kwargs)
+	def __init__(self, *args, **kwargs):
+		super(UserUpdateForm, self).__init__(*args, **kwargs)
 
-			self.fields['username'].required = False
-			self.fields['email'].required = False
-			self.fields['first_name'].required = False
-			self.fields['last_name'].required = False
+		self.fields['username'].required = False
+		self.fields['email'].required = False
+		self.fields['first_name'].required = False
+		self.fields['last_name'].required = False
 
 
 class ProfileUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Profile
-		fields = ['image', 'gender', 'birthdate', 'language']
+		fields = ['gender', 'birthdate', 'language']
 
-		def __init__(self, *args, **kwargs):
-			super(ProfileUpdateForm, self).__init__(*args, **kwargs)
+	def __init__(self, *args, **kwargs):
+		super(ProfileUpdateForm, self).__init__(*args, **kwargs)
 
-			self.fields['image'].required = False
-			self.fields['gender'].required = False
-			self.fields['birthdate'].required = False
-			self.fields['language'].required = False
+		self.fields['gender'].required = False
+		self.fields['birthdate'].required = False
+		self.fields['language'].required = False
+
+'''
+class ProfileSkillForm(forms.ModelForm):
+	class Meta:
+		model = Profile_Skill
+		fields = ['skills']
+
+	def __init__(self, *args, **kwargs):
+		super(ProfileSkillForm, self).__init__(*args, **kwargs)
+
+		self.fields['skills'].required = True
+'''

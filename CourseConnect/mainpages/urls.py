@@ -1,7 +1,7 @@
 from django.urls import path, include
 from . import views
 from django.contrib.auth import views as auth_views
-from . views import ReviewListView, ReviewDetailView, UserReviewListView, ReviewCreateView, ReviewUpdateView, ReviewDeleteView, CourseListView, rate_course
+from . views import ReviewListView, ReviewDetailView, UserReviewListView, ReviewCreateView, ReviewUpdateView, ReviewDeleteView, CourseListView, rate_course, UserCourseListView, RecommendationPage
 
 urlpatterns = [
     path('', views.homepage, name='homepage'),
@@ -9,6 +9,8 @@ urlpatterns = [
     path('logout', views.logout_user, name='logout'),
     path('register', views.register_user, name='register'),
     #path('register', views.register, name='register'),
+    #path('checkbox', views.checkbox, name='checkbox'),
+    #path('skills', views.profile_skills, name='skills'),
     path('userprofile/<str:foo>', views.userprofile, name='userprofile'),
     path('editprofile', views.editprofile, name='editprofile'),
     path('update_info', views.update_info, name='update_info'),
@@ -17,6 +19,7 @@ urlpatterns = [
     path('course/<int:pk>', views.course, name='course'),
     path('category/<str:foo>', views.category, name='category'),
     path('search', views.search, name='search'),
+    path('courses/<str:username>', UserCourseListView.as_view(), name='user-courses'),
     path('allreviews', ReviewListView.as_view(), name='allreviews'),
     #path('allreviews/<str:foo>', UserReviewListView.as_view(), name='userreviews'),
     path('user/<str:username>', UserReviewListView.as_view(), name='user-reviews'),
@@ -32,4 +35,7 @@ urlpatterns = [
     path('reset_password_sent/', auth_views.PasswordResetDoneView.as_view(template_name = 'pages/password_reset_sent.html'), name = "password_reset_done"),
     path('reset/<uidb64>/<token>/',auth_views.PasswordResetConfirmView.as_view(template_name = 'pages/password_reset_form.html'), name = "password_reset_confirm"),
     path('reset_password_complete/',auth_views.PasswordResetCompleteView.as_view(template_name ='pages/password_reset_complete.html'), name = "password_reset_complete"),
+    ##---Recommendation---##
+    path('recommendation/<str:foo>', views.getRecommendation, name='recommendations'),
+    path('recommendations/<str:username>', RecommendationPage.as_view(), name='recommendation_page'),
 ]
