@@ -1,0 +1,644 @@
+review_id,User_ID,Rating_x,Title,Username,Password,Course_id
+12,7,2,Accounting Analysis I: Measurement and Disclosure of Assets,qoot7kl2,fQf#l5}|Gh}N,2577
+13,7,2,Parallel programming,qoot7kl2,fQf#l5}|Gh}N,6284
+14,7,2,Packet Switching Networks and Algorithms,qoot7kl2,fQf#l5}|Gh}N,6285
+15,7,2,Operations Research (3): Theory,qoot7kl2,fQf#l5}|Gh}N,6288
+16,7,2,Operations Research (2): Optimization Algorithms,qoot7kl2,fQf#l5}|Gh}N,6289
+17,7,2,Motion Planning for Self-Driving Cars,qoot7kl2,fQf#l5}|Gh}N,6294
+18,7,2,Mathematical Thinking in Computer Science,qoot7kl2,fQf#l5}|Gh}N,6300
+19,7,2,Mathematical Foundations for Cryptography,qoot7kl2,fQf#l5}|Gh}N,6301
+20,7,2,Mastering Programming with MATLAB,qoot7kl2,fQf#l5}|Gh}N,6302
+21,7,2,Parallel Programming in Java,qoot7kl2,fQf#l5}|Gh}N,6307
+22,7,2,Pattern Discovery in Data Mining,qoot7kl2,fQf#l5}|Gh}N,6309
+23,7,2,Programming for Everybody (Getting Started with Python),qoot7kl2,fQf#l5}|Gh}N,6315
+24,7,2,Principles of Computing (Part 2),qoot7kl2,fQf#l5}|Gh}N,6326
+25,7,2,Principles of Computing (Part 1),qoot7kl2,fQf#l5}|Gh}N,6329
+26,7,2,Genome Assembly Programming Challenge,qoot7kl2,fQf#l5}|Gh}N,6341
+27,7,2,Fundamentals of Java Programming,qoot7kl2,fQf#l5}|Gh}N,6342
+28,7,2,Foundations of Computer Science,qoot7kl2,fQf#l5}|Gh}N,6344
+29,7,2,Ethical Issues in AI and Professional Ethics,qoot7kl2,fQf#l5}|Gh}N,6348
+30,7,2,Discrete Optimization,qoot7kl2,fQf#l5}|Gh}N,6353
+31,7,2,Development of Real-Time Systems,qoot7kl2,fQf#l5}|Gh}N,6357
+32,7,3,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,qoot7kl2,fQf#l5}|Gh}N,460
+33,7,3,Building Data Visualization Tools,qoot7kl2,fQf#l5}|Gh}N,6395
+34,7,3,Biomedical Visualisation,qoot7kl2,fQf#l5}|Gh}N,6412
+35,7,3,Bioconductor for Genomic Data Science,qoot7kl2,fQf#l5}|Gh}N,6413
+36,7,3,Bayesian Statistics: Techniques and Models,qoot7kl2,fQf#l5}|Gh}N,6416
+37,7,3,Bayesian Statistics: From Concept to Data Analysis,qoot7kl2,fQf#l5}|Gh}N,6417
+38,7,3,Building R Packages,qoot7kl2,fQf#l5}|Gh}N,6420
+39,7,3,Bayesian Statistics,qoot7kl2,fQf#l5}|Gh}N,6433
+40,7,3,Computer Vision Basics,qoot7kl2,fQf#l5}|Gh}N,6439
+41,7,3,Camera and Imaging,qoot7kl2,fQf#l5}|Gh}N,6441
+42,7,3,Business Writing,qoot7kl2,fQf#l5}|Gh}N,6445
+43,7,3,Artificial Intelligence on Microsoft Azure,qoot7kl2,fQf#l5}|Gh}N,6448
+44,7,3,A Complete Reinforcement Learning System (Capstone),qoot7kl2,fQf#l5}|Gh}N,6452
+45,7,3,3D Reconstruction - Single Viewpoint,qoot7kl2,fQf#l5}|Gh}N,6453
+46,7,3,AR (Augmented Reality) & Video Streaming Services Emerging Technologies,qoot7kl2,fQf#l5}|Gh}N,6478
+47,7,3,Applying Data Analytics in Finance,qoot7kl2,fQf#l5}|Gh}N,6479
+48,7,3,Advanced AI Techniques for the Supply Chain,qoot7kl2,fQf#l5}|Gh}N,6489
+49,7,3,AI and Climate Change,qoot7kl2,fQf#l5}|Gh}N,6502
+50,7,3,Introduction to Business Analytics with R,qoot7kl2,fQf#l5}|Gh}N,6742
+51,7,4,HarvardX: The Architectural Imagination,qoot7kl2,fQf#l5}|Gh}N,60
+52,7,4,UPValenciaX: Marketing digital en redes sociales,qoot7kl2,fQf#l5}|Gh}N,131
+53,7,4,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,qoot7kl2,fQf#l5}|Gh}N,143
+54,7,4,TecdeMonterreyX: Liderazgo y comportamiento organizacional,qoot7kl2,fQf#l5}|Gh}N,200
+55,7,4,TokyoTechX: Japanese Architecture and Structural Design,qoot7kl2,fQf#l5}|Gh}N,218
+56,7,4,DelftX: Sustainable Building with Timber,qoot7kl2,fQf#l5}|Gh}N,352
+57,7,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,qoot7kl2,fQf#l5}|Gh}N,402
+58,7,4,UQx: Introduction to Korean Studies,qoot7kl2,fQf#l5}|Gh}N,424
+59,7,4,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",qoot7kl2,fQf#l5}|Gh}N,457
+60,7,5,TUMx: Lean Production,qoot7kl2,fQf#l5}|Gh}N,0
+61,7,5,UWashingtonX: Preparing to Network in English,qoot7kl2,fQf#l5}|Gh}N,1
+62,7,5,"UPValenciaX: Power BI para los negocios, herramientas de productividad",qoot7kl2,fQf#l5}|Gh}N,2
+63,7,5,HP: From Code to Creation: Mastering Game Programming,qoot7kl2,fQf#l5}|Gh}N,3
+64,7,5,FedericaX: Robotics Foundations I - Robot Modeling,qoot7kl2,fQf#l5}|Gh}N,5
+65,7,5,"UMD, USMx: Marketing Innovative Products and Services",qoot7kl2,fQf#l5}|Gh}N,6
+66,7,5,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",qoot7kl2,fQf#l5}|Gh}N,7
+67,7,5,AlaskaX: GIS Image Analysis in ArcGIS Pro,qoot7kl2,fQf#l5}|Gh}N,8
+68,7,5,RITx: Data Representation and Visualization in Tableau,qoot7kl2,fQf#l5}|Gh}N,9
+69,7,5,IMFx: Macroeconomic Diagnostics,qoot7kl2,fQf#l5}|Gh}N,10
+70,7,5,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,qoot7kl2,fQf#l5}|Gh}N,11
+71,7,5,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",qoot7kl2,fQf#l5}|Gh}N,12
+72,7,5,UBCx: How to Code: Complex Data,qoot7kl2,fQf#l5}|Gh}N,13
+73,7,5,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,qoot7kl2,fQf#l5}|Gh}N,15
+74,7,5,DelftX: Calculus II: Multivariable Functions,qoot7kl2,fQf#l5}|Gh}N,16
+75,7,5,NYIF: Risk Management and Credit Principles,qoot7kl2,fQf#l5}|Gh}N,17
+76,7,5,"SDGAcademyX: One Planet, One Ocean",qoot7kl2,fQf#l5}|Gh}N,18
+77,7,5,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,qoot7kl2,fQf#l5}|Gh}N,19
+78,7,5,UBCx: Video Game Writing Essentials,qoot7kl2,fQf#l5}|Gh}N,20
+79,8,1,Accounting Analysis I: Measurement and Disclosure of Assets,byvd7bix,F4l^k<4p:Z{<,2577
+80,8,2,Parallel programming,byvd7bix,F4l^k<4p:Z{<,6284
+81,8,2,Packet Switching Networks and Algorithms,byvd7bix,F4l^k<4p:Z{<,6285
+82,8,2,Operations Research (3): Theory,byvd7bix,F4l^k<4p:Z{<,6288
+83,8,2,Operations Research (2): Optimization Algorithms,byvd7bix,F4l^k<4p:Z{<,6289
+84,8,2,Motion Planning for Self-Driving Cars,byvd7bix,F4l^k<4p:Z{<,6294
+85,8,2,Mathematical Thinking in Computer Science,byvd7bix,F4l^k<4p:Z{<,6300
+86,8,2,Mathematical Foundations for Cryptography,byvd7bix,F4l^k<4p:Z{<,6301
+87,8,2,Mastering Programming with MATLAB,byvd7bix,F4l^k<4p:Z{<,6302
+88,8,2,Parallel Programming in Java,byvd7bix,F4l^k<4p:Z{<,6307
+89,8,2,Pattern Discovery in Data Mining,byvd7bix,F4l^k<4p:Z{<,6309
+90,8,2,Programming for Everybody (Getting Started with Python),byvd7bix,F4l^k<4p:Z{<,6315
+91,8,2,Principles of Computing (Part 2),byvd7bix,F4l^k<4p:Z{<,6326
+92,8,2,Principles of Computing (Part 1),byvd7bix,F4l^k<4p:Z{<,6329
+93,8,2,Genome Assembly Programming Challenge,byvd7bix,F4l^k<4p:Z{<,6341
+94,8,2,Fundamentals of Java Programming,byvd7bix,F4l^k<4p:Z{<,6342
+95,8,2,Foundations of Computer Science,byvd7bix,F4l^k<4p:Z{<,6344
+96,8,2,Ethical Issues in AI and Professional Ethics,byvd7bix,F4l^k<4p:Z{<,6348
+97,8,2,Discrete Optimization,byvd7bix,F4l^k<4p:Z{<,6353
+98,8,2,Development of Real-Time Systems,byvd7bix,F4l^k<4p:Z{<,6357
+99,8,3,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,byvd7bix,F4l^k<4p:Z{<,460
+100,8,3,Building Data Visualization Tools,byvd7bix,F4l^k<4p:Z{<,6395
+101,8,3,Biomedical Visualisation,byvd7bix,F4l^k<4p:Z{<,6412
+102,8,3,Bioconductor for Genomic Data Science,byvd7bix,F4l^k<4p:Z{<,6413
+103,8,3,Bayesian Statistics: Techniques and Models,byvd7bix,F4l^k<4p:Z{<,6416
+104,8,3,Bayesian Statistics: From Concept to Data Analysis,byvd7bix,F4l^k<4p:Z{<,6417
+105,8,3,Building R Packages,byvd7bix,F4l^k<4p:Z{<,6420
+106,8,3,Bayesian Statistics,byvd7bix,F4l^k<4p:Z{<,6433
+107,8,3,Computer Vision Basics,byvd7bix,F4l^k<4p:Z{<,6439
+108,8,3,Camera and Imaging,byvd7bix,F4l^k<4p:Z{<,6441
+109,8,3,Business Writing,byvd7bix,F4l^k<4p:Z{<,6445
+110,8,3,Artificial Intelligence on Microsoft Azure,byvd7bix,F4l^k<4p:Z{<,6448
+111,8,3,A Complete Reinforcement Learning System (Capstone),byvd7bix,F4l^k<4p:Z{<,6452
+112,8,3,3D Reconstruction - Single Viewpoint,byvd7bix,F4l^k<4p:Z{<,6453
+113,8,3,AR (Augmented Reality) & Video Streaming Services Emerging Technologies,byvd7bix,F4l^k<4p:Z{<,6478
+114,8,3,Applying Data Analytics in Finance,byvd7bix,F4l^k<4p:Z{<,6479
+115,8,3,Advanced AI Techniques for the Supply Chain,byvd7bix,F4l^k<4p:Z{<,6489
+116,8,3,AI and Climate Change,byvd7bix,F4l^k<4p:Z{<,6502
+117,8,3,Introduction to Business Analytics with R,byvd7bix,F4l^k<4p:Z{<,6742
+118,8,4,HarvardX: The Architectural Imagination,byvd7bix,F4l^k<4p:Z{<,60
+119,8,4,UPValenciaX: Marketing digital en redes sociales,byvd7bix,F4l^k<4p:Z{<,131
+120,8,4,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,byvd7bix,F4l^k<4p:Z{<,143
+121,8,4,TecdeMonterreyX: Liderazgo y comportamiento organizacional,byvd7bix,F4l^k<4p:Z{<,200
+122,8,4,TokyoTechX: Japanese Architecture and Structural Design,byvd7bix,F4l^k<4p:Z{<,218
+123,8,4,DelftX: Sustainable Building with Timber,byvd7bix,F4l^k<4p:Z{<,352
+124,8,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,byvd7bix,F4l^k<4p:Z{<,402
+125,8,4,UQx: Introduction to Korean Studies,byvd7bix,F4l^k<4p:Z{<,424
+126,8,4,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",byvd7bix,F4l^k<4p:Z{<,457
+127,8,5,TUMx: Lean Production,byvd7bix,F4l^k<4p:Z{<,0
+128,8,5,UWashingtonX: Preparing to Network in English,byvd7bix,F4l^k<4p:Z{<,1
+129,8,5,"UPValenciaX: Power BI para los negocios, herramientas de productividad",byvd7bix,F4l^k<4p:Z{<,2
+130,8,5,HP: From Code to Creation: Mastering Game Programming,byvd7bix,F4l^k<4p:Z{<,3
+131,8,5,FedericaX: Robotics Foundations I - Robot Modeling,byvd7bix,F4l^k<4p:Z{<,5
+132,8,5,"UMD, USMx: Marketing Innovative Products and Services",byvd7bix,F4l^k<4p:Z{<,6
+133,8,5,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",byvd7bix,F4l^k<4p:Z{<,7
+134,8,5,AlaskaX: GIS Image Analysis in ArcGIS Pro,byvd7bix,F4l^k<4p:Z{<,8
+135,8,5,RITx: Data Representation and Visualization in Tableau,byvd7bix,F4l^k<4p:Z{<,9
+136,8,5,IMFx: Macroeconomic Diagnostics,byvd7bix,F4l^k<4p:Z{<,10
+137,8,5,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,byvd7bix,F4l^k<4p:Z{<,11
+138,8,5,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",byvd7bix,F4l^k<4p:Z{<,12
+139,8,5,UBCx: How to Code: Complex Data,byvd7bix,F4l^k<4p:Z{<,13
+140,8,5,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,byvd7bix,F4l^k<4p:Z{<,15
+141,8,5,DelftX: Calculus II: Multivariable Functions,byvd7bix,F4l^k<4p:Z{<,16
+142,8,5,NYIF: Risk Management and Credit Principles,byvd7bix,F4l^k<4p:Z{<,17
+143,8,5,"SDGAcademyX: One Planet, One Ocean",byvd7bix,F4l^k<4p:Z{<,18
+144,8,5,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,byvd7bix,F4l^k<4p:Z{<,19
+145,8,5,UBCx: Video Game Writing Essentials,byvd7bix,F4l^k<4p:Z{<,20
+146,8,1,Financial Analysis for Startups,byvd7bix,F4l^k<4p:Z{<,6506
+147,8,1,Financial Accounting: Foundations,byvd7bix,F4l^k<4p:Z{<,6507
+148,8,1,Financial Accounting: Advanced Topics,byvd7bix,F4l^k<4p:Z{<,6508
+149,8,1,Finance for Startups,byvd7bix,F4l^k<4p:Z{<,6513
+150,8,1,Finance for Non-Financial Professionals,byvd7bix,F4l^k<4p:Z{<,6514
+151,8,1,Finance for Managers,byvd7bix,F4l^k<4p:Z{<,6524
+152,8,1,Finance For Everyone: Value,byvd7bix,F4l^k<4p:Z{<,6525
+153,8,1,Federal Taxation II: Property Transactions of Business Owners and Shareholders,byvd7bix,F4l^k<4p:Z{<,6526
+154,8,1,Financial Reporting Capstone,byvd7bix,F4l^k<4p:Z{<,6529
+155,8,1,"Financial Statements, SEC Filings and Ratio Analysis",byvd7bix,F4l^k<4p:Z{<,6530
+156,8,1,Finanzas para profesionales no financieros,byvd7bix,F4l^k<4p:Z{<,6531
+157,8,1,"Introduction to Financial Analysis - The ""Why?""",byvd7bix,F4l^k<4p:Z{<,6533
+158,8,1,Introduction to Financial Accounting,byvd7bix,F4l^k<4p:Z{<,6534
+159,8,1,Introduction to Finance: The Basics,byvd7bix,F4l^k<4p:Z{<,6536
+160,8,1,Introduction to Accounting Data Analytics and Visualization,byvd7bix,F4l^k<4p:Z{<,6538
+161,8,1,International Business Operations,byvd7bix,F4l^k<4p:Z{<,6539
+162,8,1,Fundamentals of financial and management accounting,byvd7bix,F4l^k<4p:Z{<,6551
+163,8,1,Fundamentals of Accounting Capstone,byvd7bix,F4l^k<4p:Z{<,6555
+164,8,1,Fundamentals of Accounting and Reporting,byvd7bix,F4l^k<4p:Z{<,6556
+165,8,2,"Dynamic Programming, Greedy Algorithms",byvd7bix,F4l^k<4p:Z{<,6363
+166,9,1,Accounting Analysis I: Measurement and Disclosure of Assets,l9xxy1xz,"&%""{-'l%R-`r",2577
+167,9,2,Parallel programming,l9xxy1xz,"&%""{-'l%R-`r",6284
+168,9,2,Packet Switching Networks and Algorithms,l9xxy1xz,"&%""{-'l%R-`r",6285
+169,9,2,Operations Research (3): Theory,l9xxy1xz,"&%""{-'l%R-`r",6288
+170,9,2,Operations Research (2): Optimization Algorithms,l9xxy1xz,"&%""{-'l%R-`r",6289
+171,9,2,Motion Planning for Self-Driving Cars,l9xxy1xz,"&%""{-'l%R-`r",6294
+172,9,2,Mathematical Thinking in Computer Science,l9xxy1xz,"&%""{-'l%R-`r",6300
+173,9,2,Mathematical Foundations for Cryptography,l9xxy1xz,"&%""{-'l%R-`r",6301
+174,9,2,Mastering Programming with MATLAB,l9xxy1xz,"&%""{-'l%R-`r",6302
+175,9,2,Parallel Programming in Java,l9xxy1xz,"&%""{-'l%R-`r",6307
+176,9,2,Pattern Discovery in Data Mining,l9xxy1xz,"&%""{-'l%R-`r",6309
+177,9,2,Programming for Everybody (Getting Started with Python),l9xxy1xz,"&%""{-'l%R-`r",6315
+178,9,2,Principles of Computing (Part 2),l9xxy1xz,"&%""{-'l%R-`r",6326
+179,9,2,Principles of Computing (Part 1),l9xxy1xz,"&%""{-'l%R-`r",6329
+180,9,2,Genome Assembly Programming Challenge,l9xxy1xz,"&%""{-'l%R-`r",6341
+181,9,2,Fundamentals of Java Programming,l9xxy1xz,"&%""{-'l%R-`r",6342
+182,9,2,Foundations of Computer Science,l9xxy1xz,"&%""{-'l%R-`r",6344
+183,9,2,Ethical Issues in AI and Professional Ethics,l9xxy1xz,"&%""{-'l%R-`r",6348
+184,9,2,Discrete Optimization,l9xxy1xz,"&%""{-'l%R-`r",6353
+185,9,2,Development of Real-Time Systems,l9xxy1xz,"&%""{-'l%R-`r",6357
+186,9,3,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,l9xxy1xz,"&%""{-'l%R-`r",460
+187,9,4,HarvardX: The Architectural Imagination,l9xxy1xz,"&%""{-'l%R-`r",60
+188,9,4,UPValenciaX: Marketing digital en redes sociales,l9xxy1xz,"&%""{-'l%R-`r",131
+189,9,4,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,l9xxy1xz,"&%""{-'l%R-`r",143
+190,9,4,TecdeMonterreyX: Liderazgo y comportamiento organizacional,l9xxy1xz,"&%""{-'l%R-`r",200
+191,9,4,TokyoTechX: Japanese Architecture and Structural Design,l9xxy1xz,"&%""{-'l%R-`r",218
+192,9,4,DelftX: Sustainable Building with Timber,l9xxy1xz,"&%""{-'l%R-`r",352
+193,9,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,l9xxy1xz,"&%""{-'l%R-`r",402
+194,9,4,UQx: Introduction to Korean Studies,l9xxy1xz,"&%""{-'l%R-`r",424
+195,9,4,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",l9xxy1xz,"&%""{-'l%R-`r",457
+196,9,5,TUMx: Lean Production,l9xxy1xz,"&%""{-'l%R-`r",0
+197,9,5,UWashingtonX: Preparing to Network in English,l9xxy1xz,"&%""{-'l%R-`r",1
+198,9,5,"UPValenciaX: Power BI para los negocios, herramientas de productividad",l9xxy1xz,"&%""{-'l%R-`r",2
+199,9,5,HP: From Code to Creation: Mastering Game Programming,l9xxy1xz,"&%""{-'l%R-`r",3
+200,9,5,FedericaX: Robotics Foundations I - Robot Modeling,l9xxy1xz,"&%""{-'l%R-`r",5
+201,9,5,"UMD, USMx: Marketing Innovative Products and Services",l9xxy1xz,"&%""{-'l%R-`r",6
+202,9,5,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",l9xxy1xz,"&%""{-'l%R-`r",7
+203,9,5,AlaskaX: GIS Image Analysis in ArcGIS Pro,l9xxy1xz,"&%""{-'l%R-`r",8
+204,9,5,RITx: Data Representation and Visualization in Tableau,l9xxy1xz,"&%""{-'l%R-`r",9
+205,9,5,IMFx: Macroeconomic Diagnostics,l9xxy1xz,"&%""{-'l%R-`r",10
+206,9,5,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,l9xxy1xz,"&%""{-'l%R-`r",11
+207,9,5,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",l9xxy1xz,"&%""{-'l%R-`r",12
+208,9,5,UBCx: How to Code: Complex Data,l9xxy1xz,"&%""{-'l%R-`r",13
+209,9,5,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,l9xxy1xz,"&%""{-'l%R-`r",15
+210,9,5,DelftX: Calculus II: Multivariable Functions,l9xxy1xz,"&%""{-'l%R-`r",16
+211,9,5,NYIF: Risk Management and Credit Principles,l9xxy1xz,"&%""{-'l%R-`r",17
+212,9,5,"SDGAcademyX: One Planet, One Ocean",l9xxy1xz,"&%""{-'l%R-`r",18
+213,9,5,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,l9xxy1xz,"&%""{-'l%R-`r",19
+214,9,5,UBCx: Video Game Writing Essentials,l9xxy1xz,"&%""{-'l%R-`r",20
+215,9,1,Financial Analysis for Startups,l9xxy1xz,"&%""{-'l%R-`r",6506
+216,9,1,Financial Accounting: Foundations,l9xxy1xz,"&%""{-'l%R-`r",6507
+217,9,1,Financial Accounting: Advanced Topics,l9xxy1xz,"&%""{-'l%R-`r",6508
+218,9,1,Finance for Startups,l9xxy1xz,"&%""{-'l%R-`r",6513
+219,9,1,Finance for Non-Financial Professionals,l9xxy1xz,"&%""{-'l%R-`r",6514
+220,9,1,Finance for Managers,l9xxy1xz,"&%""{-'l%R-`r",6524
+221,9,1,Finance For Everyone: Value,l9xxy1xz,"&%""{-'l%R-`r",6525
+222,9,1,Federal Taxation II: Property Transactions of Business Owners and Shareholders,l9xxy1xz,"&%""{-'l%R-`r",6526
+223,9,1,Financial Reporting Capstone,l9xxy1xz,"&%""{-'l%R-`r",6529
+224,9,1,"Financial Statements, SEC Filings and Ratio Analysis",l9xxy1xz,"&%""{-'l%R-`r",6530
+225,9,1,Finanzas para profesionales no financieros,l9xxy1xz,"&%""{-'l%R-`r",6531
+226,9,1,"Introduction to Financial Analysis - The ""Why?""",l9xxy1xz,"&%""{-'l%R-`r",6533
+227,9,1,Introduction to Financial Accounting,l9xxy1xz,"&%""{-'l%R-`r",6534
+228,9,1,Introduction to Finance: The Basics,l9xxy1xz,"&%""{-'l%R-`r",6536
+229,9,1,Introduction to Accounting Data Analytics and Visualization,l9xxy1xz,"&%""{-'l%R-`r",6538
+230,9,1,International Business Operations,l9xxy1xz,"&%""{-'l%R-`r",6539
+231,9,1,Fundamentals of financial and management accounting,l9xxy1xz,"&%""{-'l%R-`r",6551
+232,9,1,Fundamentals of Accounting Capstone,l9xxy1xz,"&%""{-'l%R-`r",6555
+233,9,1,Fundamentals of Accounting and Reporting,l9xxy1xz,"&%""{-'l%R-`r",6556
+234,9,2,"Dynamic Programming, Greedy Algorithms",l9xxy1xz,"&%""{-'l%R-`r",6363
+235,9,3,The Place of Music in 21st Century Education,l9xxy1xz,"&%""{-'l%R-`r",5374
+236,9,3,The Piano Sonata: Russian and 20th-21st Century Composers,l9xxy1xz,"&%""{-'l%R-`r",5375
+237,9,3,The Piano Sonata: Origins to Mozart,l9xxy1xz,"&%""{-'l%R-`r",5376
+238,9,3,The Piano Sonata: Beethoven and the Romantics,l9xxy1xz,"&%""{-'l%R-`r",5377
+239,9,3,The Music of the Beatles,l9xxy1xz,"&%""{-'l%R-`r",5378
+240,9,3,"The Modern World, Part Two: Global History since 1910",l9xxy1xz,"&%""{-'l%R-`r",5381
+241,9,3,The Modern and the Postmodern (Part 2),l9xxy1xz,"&%""{-'l%R-`r",5382
+242,9,3,The Modern and the Postmodern (Part 1),l9xxy1xz,"&%""{-'l%R-`r",5383
+243,9,3,The Making of Modern Ukraine,l9xxy1xz,"&%""{-'l%R-`r",5384
+244,9,3,The Politics of Skepticism,l9xxy1xz,"&%""{-'l%R-`r",5385
+245,9,3,The Kennedy Half Century,l9xxy1xz,"&%""{-'l%R-`r",5386
+246,9,3,The Holocaust: The Destruction of European Jewry,l9xxy1xz,"&%""{-'l%R-`r",5387
+247,9,3,The French Revolution,l9xxy1xz,"&%""{-'l%R-`r",5389
+248,9,3,The Epistemic Quest for Truth: Introduction to epistemology,l9xxy1xz,"&%""{-'l%R-`r",5390
+249,9,3,The Emergence of the Modern Middle East - Part II,l9xxy1xz,"&%""{-'l%R-`r",5391
+250,9,3,The Emergence of the Modern Middle East - Part I,l9xxy1xz,"&%""{-'l%R-`r",5392
+251,9,3,The Rooseveltian Century,l9xxy1xz,"&%""{-'l%R-`r",5400
+252,9,3,The Technology of Music Production,l9xxy1xz,"&%""{-'l%R-`r",5401
+253,10,2,Accounting Analysis I: Measurement and Disclosure of Assets,r9aap3ke,Ujy1'(e4rgLh,2577
+254,10,2,Parallel programming,r9aap3ke,Ujy1'(e4rgLh,6284
+255,10,2,Packet Switching Networks and Algorithms,r9aap3ke,Ujy1'(e4rgLh,6285
+256,10,2,Operations Research (3): Theory,r9aap3ke,Ujy1'(e4rgLh,6288
+257,10,2,Operations Research (2): Optimization Algorithms,r9aap3ke,Ujy1'(e4rgLh,6289
+258,10,2,Motion Planning for Self-Driving Cars,r9aap3ke,Ujy1'(e4rgLh,6294
+259,10,2,Mathematical Thinking in Computer Science,r9aap3ke,Ujy1'(e4rgLh,6300
+260,10,2,Mathematical Foundations for Cryptography,r9aap3ke,Ujy1'(e4rgLh,6301
+261,10,2,Mastering Programming with MATLAB,r9aap3ke,Ujy1'(e4rgLh,6302
+262,10,2,Parallel Programming in Java,r9aap3ke,Ujy1'(e4rgLh,6307
+263,10,2,Pattern Discovery in Data Mining,r9aap3ke,Ujy1'(e4rgLh,6309
+264,10,2,Programming for Everybody (Getting Started with Python),r9aap3ke,Ujy1'(e4rgLh,6315
+265,10,2,Principles of Computing (Part 2),r9aap3ke,Ujy1'(e4rgLh,6326
+266,10,2,Principles of Computing (Part 1),r9aap3ke,Ujy1'(e4rgLh,6329
+267,10,2,Genome Assembly Programming Challenge,r9aap3ke,Ujy1'(e4rgLh,6341
+268,10,2,Fundamentals of Java Programming,r9aap3ke,Ujy1'(e4rgLh,6342
+269,10,2,Foundations of Computer Science,r9aap3ke,Ujy1'(e4rgLh,6344
+270,10,2,Ethical Issues in AI and Professional Ethics,r9aap3ke,Ujy1'(e4rgLh,6348
+271,10,2,Discrete Optimization,r9aap3ke,Ujy1'(e4rgLh,6353
+272,10,2,Development of Real-Time Systems,r9aap3ke,Ujy1'(e4rgLh,6357
+273,10,3,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,r9aap3ke,Ujy1'(e4rgLh,460
+274,10,3,Building Data Visualization Tools,r9aap3ke,Ujy1'(e4rgLh,6395
+275,10,3,Biomedical Visualisation,r9aap3ke,Ujy1'(e4rgLh,6412
+276,10,3,Bioconductor for Genomic Data Science,r9aap3ke,Ujy1'(e4rgLh,6413
+277,10,3,Bayesian Statistics: Techniques and Models,r9aap3ke,Ujy1'(e4rgLh,6416
+278,10,3,Bayesian Statistics: From Concept to Data Analysis,r9aap3ke,Ujy1'(e4rgLh,6417
+279,10,3,Building R Packages,r9aap3ke,Ujy1'(e4rgLh,6420
+280,10,3,Bayesian Statistics,r9aap3ke,Ujy1'(e4rgLh,6433
+281,10,3,Computer Vision Basics,r9aap3ke,Ujy1'(e4rgLh,6439
+282,10,3,Camera and Imaging,r9aap3ke,Ujy1'(e4rgLh,6441
+283,10,3,Business Writing,r9aap3ke,Ujy1'(e4rgLh,6445
+284,10,3,Artificial Intelligence on Microsoft Azure,r9aap3ke,Ujy1'(e4rgLh,6448
+285,10,3,A Complete Reinforcement Learning System (Capstone),r9aap3ke,Ujy1'(e4rgLh,6452
+286,10,3,3D Reconstruction - Single Viewpoint,r9aap3ke,Ujy1'(e4rgLh,6453
+287,10,3,AR (Augmented Reality) & Video Streaming Services Emerging Technologies,r9aap3ke,Ujy1'(e4rgLh,6478
+288,10,3,Applying Data Analytics in Finance,r9aap3ke,Ujy1'(e4rgLh,6479
+289,10,3,Advanced AI Techniques for the Supply Chain,r9aap3ke,Ujy1'(e4rgLh,6489
+290,10,3,AI and Climate Change,r9aap3ke,Ujy1'(e4rgLh,6502
+291,10,3,Introduction to Business Analytics with R,r9aap3ke,Ujy1'(e4rgLh,6742
+292,10,4,HarvardX: The Architectural Imagination,r9aap3ke,Ujy1'(e4rgLh,60
+293,10,4,UPValenciaX: Marketing digital en redes sociales,r9aap3ke,Ujy1'(e4rgLh,131
+294,10,4,TecdeMonterreyX: Liderazgo y comportamiento organizacional,r9aap3ke,Ujy1'(e4rgLh,200
+295,10,4,TokyoTechX: Japanese Architecture and Structural Design,r9aap3ke,Ujy1'(e4rgLh,218
+296,10,4,DelftX: Sustainable Building with Timber,r9aap3ke,Ujy1'(e4rgLh,352
+297,10,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,r9aap3ke,Ujy1'(e4rgLh,402
+298,10,5,TUMx: Lean Production,r9aap3ke,Ujy1'(e4rgLh,0
+299,10,5,UWashingtonX: Preparing to Network in English,r9aap3ke,Ujy1'(e4rgLh,1
+300,10,5,"UPValenciaX: Power BI para los negocios, herramientas de productividad",r9aap3ke,Ujy1'(e4rgLh,2
+301,10,5,HP: From Code to Creation: Mastering Game Programming,r9aap3ke,Ujy1'(e4rgLh,3
+302,10,5,FedericaX: Robotics Foundations I - Robot Modeling,r9aap3ke,Ujy1'(e4rgLh,5
+303,10,5,"UMD, USMx: Marketing Innovative Products and Services",r9aap3ke,Ujy1'(e4rgLh,6
+304,10,5,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",r9aap3ke,Ujy1'(e4rgLh,7
+305,10,5,AlaskaX: GIS Image Analysis in ArcGIS Pro,r9aap3ke,Ujy1'(e4rgLh,8
+306,10,5,RITx: Data Representation and Visualization in Tableau,r9aap3ke,Ujy1'(e4rgLh,9
+307,10,5,IMFx: Macroeconomic Diagnostics,r9aap3ke,Ujy1'(e4rgLh,10
+308,10,5,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,r9aap3ke,Ujy1'(e4rgLh,11
+309,10,5,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",r9aap3ke,Ujy1'(e4rgLh,12
+310,10,5,UBCx: How to Code: Complex Data,r9aap3ke,Ujy1'(e4rgLh,13
+311,10,5,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,r9aap3ke,Ujy1'(e4rgLh,15
+312,10,5,DelftX: Calculus II: Multivariable Functions,r9aap3ke,Ujy1'(e4rgLh,16
+313,10,5,NYIF: Risk Management and Credit Principles,r9aap3ke,Ujy1'(e4rgLh,17
+314,10,5,"SDGAcademyX: One Planet, One Ocean",r9aap3ke,Ujy1'(e4rgLh,18
+315,10,5,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,r9aap3ke,Ujy1'(e4rgLh,19
+316,10,5,UBCx: Video Game Writing Essentials,r9aap3ke,Ujy1'(e4rgLh,20
+317,10,4,UPValenciaX: Fundamentos del marketing digital,r9aap3ke,Ujy1'(e4rgLh,465
+318,10,4,DelftX: Efficient HVAC Systems,r9aap3ke,Ujy1'(e4rgLh,538
+319,11,2,Accounting Analysis I: Measurement and Disclosure of Assets,jwsrkvpr,!T*$t^5AY^nV,2577
+320,11,2,Parallel programming,jwsrkvpr,!T*$t^5AY^nV,6284
+321,11,2,Packet Switching Networks and Algorithms,jwsrkvpr,!T*$t^5AY^nV,6285
+322,11,2,Operations Research (3): Theory,jwsrkvpr,!T*$t^5AY^nV,6288
+323,11,2,Operations Research (2): Optimization Algorithms,jwsrkvpr,!T*$t^5AY^nV,6289
+324,11,2,Motion Planning for Self-Driving Cars,jwsrkvpr,!T*$t^5AY^nV,6294
+325,11,2,Mathematical Thinking in Computer Science,jwsrkvpr,!T*$t^5AY^nV,6300
+326,11,2,Mathematical Foundations for Cryptography,jwsrkvpr,!T*$t^5AY^nV,6301
+327,11,2,Mastering Programming with MATLAB,jwsrkvpr,!T*$t^5AY^nV,6302
+328,11,2,Parallel Programming in Java,jwsrkvpr,!T*$t^5AY^nV,6307
+329,11,2,Pattern Discovery in Data Mining,jwsrkvpr,!T*$t^5AY^nV,6309
+330,11,2,Programming for Everybody (Getting Started with Python),jwsrkvpr,!T*$t^5AY^nV,6315
+331,11,2,Principles of Computing (Part 2),jwsrkvpr,!T*$t^5AY^nV,6326
+332,11,2,Principles of Computing (Part 1),jwsrkvpr,!T*$t^5AY^nV,6329
+333,11,2,Genome Assembly Programming Challenge,jwsrkvpr,!T*$t^5AY^nV,6341
+334,11,2,Fundamentals of Java Programming,jwsrkvpr,!T*$t^5AY^nV,6342
+335,11,2,Foundations of Computer Science,jwsrkvpr,!T*$t^5AY^nV,6344
+336,11,2,Ethical Issues in AI and Professional Ethics,jwsrkvpr,!T*$t^5AY^nV,6348
+337,11,2,Discrete Optimization,jwsrkvpr,!T*$t^5AY^nV,6353
+338,11,2,Development of Real-Time Systems,jwsrkvpr,!T*$t^5AY^nV,6357
+339,11,4,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,jwsrkvpr,!T*$t^5AY^nV,460
+340,11,3,Building Data Visualization Tools,jwsrkvpr,!T*$t^5AY^nV,6395
+341,11,3,Biomedical Visualisation,jwsrkvpr,!T*$t^5AY^nV,6412
+342,11,3,Bioconductor for Genomic Data Science,jwsrkvpr,!T*$t^5AY^nV,6413
+343,11,3,Bayesian Statistics: Techniques and Models,jwsrkvpr,!T*$t^5AY^nV,6416
+344,11,3,Bayesian Statistics: From Concept to Data Analysis,jwsrkvpr,!T*$t^5AY^nV,6417
+345,11,3,Building R Packages,jwsrkvpr,!T*$t^5AY^nV,6420
+346,11,3,Bayesian Statistics,jwsrkvpr,!T*$t^5AY^nV,6433
+347,11,3,Computer Vision Basics,jwsrkvpr,!T*$t^5AY^nV,6439
+348,11,3,Camera and Imaging,jwsrkvpr,!T*$t^5AY^nV,6441
+349,11,3,Business Writing,jwsrkvpr,!T*$t^5AY^nV,6445
+350,11,3,Artificial Intelligence on Microsoft Azure,jwsrkvpr,!T*$t^5AY^nV,6448
+351,11,3,A Complete Reinforcement Learning System (Capstone),jwsrkvpr,!T*$t^5AY^nV,6452
+352,11,3,3D Reconstruction - Single Viewpoint,jwsrkvpr,!T*$t^5AY^nV,6453
+353,11,3,AR (Augmented Reality) & Video Streaming Services Emerging Technologies,jwsrkvpr,!T*$t^5AY^nV,6478
+354,11,3,Applying Data Analytics in Finance,jwsrkvpr,!T*$t^5AY^nV,6479
+355,11,3,Advanced AI Techniques for the Supply Chain,jwsrkvpr,!T*$t^5AY^nV,6489
+356,11,3,AI and Climate Change,jwsrkvpr,!T*$t^5AY^nV,6502
+357,11,3,Introduction to Business Analytics with R,jwsrkvpr,!T*$t^5AY^nV,6742
+358,11,4,HarvardX: The Architectural Imagination,jwsrkvpr,!T*$t^5AY^nV,60
+359,11,4,TokyoTechX: Japanese Architecture and Structural Design,jwsrkvpr,!T*$t^5AY^nV,218
+360,11,4,DelftX: Sustainable Building with Timber,jwsrkvpr,!T*$t^5AY^nV,352
+361,11,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,jwsrkvpr,!T*$t^5AY^nV,402
+362,11,5,TUMx: Lean Production,jwsrkvpr,!T*$t^5AY^nV,0
+363,11,5,UWashingtonX: Preparing to Network in English,jwsrkvpr,!T*$t^5AY^nV,1
+364,11,5,"UPValenciaX: Power BI para los negocios, herramientas de productividad",jwsrkvpr,!T*$t^5AY^nV,2
+365,11,5,HP: From Code to Creation: Mastering Game Programming,jwsrkvpr,!T*$t^5AY^nV,3
+366,11,5,FedericaX: Robotics Foundations I - Robot Modeling,jwsrkvpr,!T*$t^5AY^nV,5
+367,11,5,"UMD, USMx: Marketing Innovative Products and Services",jwsrkvpr,!T*$t^5AY^nV,6
+368,11,5,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",jwsrkvpr,!T*$t^5AY^nV,7
+369,11,5,AlaskaX: GIS Image Analysis in ArcGIS Pro,jwsrkvpr,!T*$t^5AY^nV,8
+370,11,5,RITx: Data Representation and Visualization in Tableau,jwsrkvpr,!T*$t^5AY^nV,9
+371,11,5,IMFx: Macroeconomic Diagnostics,jwsrkvpr,!T*$t^5AY^nV,10
+372,11,5,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,jwsrkvpr,!T*$t^5AY^nV,11
+373,11,5,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",jwsrkvpr,!T*$t^5AY^nV,12
+374,11,5,UBCx: How to Code: Complex Data,jwsrkvpr,!T*$t^5AY^nV,13
+375,11,5,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,jwsrkvpr,!T*$t^5AY^nV,15
+376,11,5,DelftX: Calculus II: Multivariable Functions,jwsrkvpr,!T*$t^5AY^nV,16
+377,11,5,NYIF: Risk Management and Credit Principles,jwsrkvpr,!T*$t^5AY^nV,17
+378,11,5,"SDGAcademyX: One Planet, One Ocean",jwsrkvpr,!T*$t^5AY^nV,18
+379,11,5,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,jwsrkvpr,!T*$t^5AY^nV,19
+380,11,4,The Place of Music in 21st Century Education,jwsrkvpr,!T*$t^5AY^nV,5374
+381,11,4,The Piano Sonata: Russian and 20th-21st Century Composers,jwsrkvpr,!T*$t^5AY^nV,5375
+382,11,4,The Piano Sonata: Origins to Mozart,jwsrkvpr,!T*$t^5AY^nV,5376
+383,11,4,The Piano Sonata: Beethoven and the Romantics,jwsrkvpr,!T*$t^5AY^nV,5377
+384,11,4,The Music of the Beatles,jwsrkvpr,!T*$t^5AY^nV,5378
+385,11,4,DelftX: Efficient HVAC Systems,jwsrkvpr,!T*$t^5AY^nV,538
+386,11,3,Game Design Document: Define the Art & Concepts,jwsrkvpr,!T*$t^5AY^nV,6282
+387,11,3,Fundamentals of Digital Image and Video Processing,jwsrkvpr,!T*$t^5AY^nV,6796
+388,11,4,"DelftX, WageningenX: Sustainable Urban Development",jwsrkvpr,!T*$t^5AY^nV,604
+389,11,4,DelftX: Global Housing Design,jwsrkvpr,!T*$t^5AY^nV,655
+390,11,4,DelftX: Circular Economy for a Sustainable Built Environment,jwsrkvpr,!T*$t^5AY^nV,886
+391,11,4,DelftX: Energy Demand in Buildings,jwsrkvpr,!T*$t^5AY^nV,890
+392,11,4,EPFLx: Advanced Timber Plate Structural Design,jwsrkvpr,!T*$t^5AY^nV,897
+393,11,4,FedericaX: Theatre and set design,jwsrkvpr,!T*$t^5AY^nV,907
+394,11,4,Getting Started with Front-End and Web Development,jwsrkvpr,!T*$t^5AY^nV,2536
+395,12,5,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,5pulwu74,"l""gT*'Ik#0'K",460
+396,12,5,HarvardX: The Architectural Imagination,5pulwu74,"l""gT*'Ik#0'K",60
+397,12,5,TokyoTechX: Japanese Architecture and Structural Design,5pulwu74,"l""gT*'Ik#0'K",218
+398,12,5,DelftX: Sustainable Building with Timber,5pulwu74,"l""gT*'Ik#0'K",352
+399,12,5,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,5pulwu74,"l""gT*'Ik#0'K",402
+400,12,4,TUMx: Lean Production,5pulwu74,"l""gT*'Ik#0'K",0
+401,12,3,UWashingtonX: Preparing to Network in English,5pulwu74,"l""gT*'Ik#0'K",1
+402,12,4,"UPValenciaX: Power BI para los negocios, herramientas de productividad",5pulwu74,"l""gT*'Ik#0'K",2
+403,12,3,HP: From Code to Creation: Mastering Game Programming,5pulwu74,"l""gT*'Ik#0'K",3
+404,12,3,FedericaX: Robotics Foundations I - Robot Modeling,5pulwu74,"l""gT*'Ik#0'K",5
+405,12,4,"UMD, USMx: Marketing Innovative Products and Services",5pulwu74,"l""gT*'Ik#0'K",6
+406,12,4,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",5pulwu74,"l""gT*'Ik#0'K",7
+407,12,3,AlaskaX: GIS Image Analysis in ArcGIS Pro,5pulwu74,"l""gT*'Ik#0'K",8
+408,12,3,RITx: Data Representation and Visualization in Tableau,5pulwu74,"l""gT*'Ik#0'K",9
+409,12,3,IMFx: Macroeconomic Diagnostics,5pulwu74,"l""gT*'Ik#0'K",10
+410,12,3,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,5pulwu74,"l""gT*'Ik#0'K",11
+411,12,3,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",5pulwu74,"l""gT*'Ik#0'K",12
+412,12,3,UBCx: How to Code: Complex Data,5pulwu74,"l""gT*'Ik#0'K",13
+413,12,4,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,5pulwu74,"l""gT*'Ik#0'K",15
+414,12,3,DelftX: Calculus II: Multivariable Functions,5pulwu74,"l""gT*'Ik#0'K",16
+415,12,3,NYIF: Risk Management and Credit Principles,5pulwu74,"l""gT*'Ik#0'K",17
+416,12,3,"SDGAcademyX: One Planet, One Ocean",5pulwu74,"l""gT*'Ik#0'K",18
+417,12,4,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,5pulwu74,"l""gT*'Ik#0'K",19
+418,12,3,UBCx: Video Game Writing Essentials,5pulwu74,"l""gT*'Ik#0'K",20
+419,12,5,The Place of Music in 21st Century Education,5pulwu74,"l""gT*'Ik#0'K",5374
+420,12,5,The Piano Sonata: Russian and 20th-21st Century Composers,5pulwu74,"l""gT*'Ik#0'K",5375
+421,12,5,The Piano Sonata: Origins to Mozart,5pulwu74,"l""gT*'Ik#0'K",5376
+422,12,5,The Piano Sonata: Beethoven and the Romantics,5pulwu74,"l""gT*'Ik#0'K",5377
+423,12,5,The Music of the Beatles,5pulwu74,"l""gT*'Ik#0'K",5378
+424,12,5,DelftX: Efficient HVAC Systems,5pulwu74,"l""gT*'Ik#0'K",538
+425,12,5,"DelftX, WageningenX: Sustainable Urban Development",5pulwu74,"l""gT*'Ik#0'K",604
+426,12,5,DelftX: Global Housing Design,5pulwu74,"l""gT*'Ik#0'K",655
+427,12,5,DelftX: Circular Economy for a Sustainable Built Environment,5pulwu74,"l""gT*'Ik#0'K",886
+428,12,5,DelftX: Energy Demand in Buildings,5pulwu74,"l""gT*'Ik#0'K",890
+429,12,5,EPFLx: Advanced Timber Plate Structural Design,5pulwu74,"l""gT*'Ik#0'K",897
+430,12,5,FedericaX: Theatre and set design,5pulwu74,"l""gT*'Ik#0'K",907
+431,12,5,Getting Started with Front-End and Web Development,5pulwu74,"l""gT*'Ik#0'K",2536
+432,12,3,EC-Council: Digital Forensics Essentials (DFE),5pulwu74,"l""gT*'Ik#0'K",21
+433,12,3,"IBM: Introduction to Cloud Native, DevOps, Agile, and NoSQL",5pulwu74,"l""gT*'Ik#0'K",22
+434,12,3,IBM: Python for Data Engineering Project,5pulwu74,"l""gT*'Ik#0'K",23
+435,12,3,UCx: A Better Start to Reading,5pulwu74,"l""gT*'Ik#0'K",24
+436,12,3,"UMD, USMx: The Industry and Profession in Construction Management",5pulwu74,"l""gT*'Ik#0'K",25
+437,12,3,HarvardX: We the People: Civic Engagement in a Constitutional Democracy,5pulwu74,"l""gT*'Ik#0'K",26
+438,12,4,UWashingtonX: Strategic Applications of IT Project & Program Management,5pulwu74,"l""gT*'Ik#0'K",28
+439,12,4,WOBI: How to Influence the Consumer Behavior to Drive Sales by Jonah Berger,5pulwu74,"l""gT*'Ik#0'K",32
+440,12,4,IIMBx: DO Your Venture: Entrepreneurship For Everyone,5pulwu74,"l""gT*'Ik#0'K",37
+441,12,4,URosarioX: El cerebro y las emociones en el lenguaje,5pulwu74,"l""gT*'Ik#0'K",38
+442,12,4,UPValenciaX: Fundamentos TIC para profesionales de negocios: Ciberseguridad e Implicaciones sociales,5pulwu74,"l""gT*'Ik#0'K",44
+443,12,4,MITx: Becoming an Entrepreneur,5pulwu74,"l""gT*'Ik#0'K",51
+444,12,4,AdelaideX: Introduction to Project Management,5pulwu74,"l""gT*'Ik#0'K",63
+445,12,4,EdinburghX: Digital Marketing Strategy,5pulwu74,"l""gT*'Ik#0'K",69
+446,12,4,IIMBx: Accounting and Finance,5pulwu74,"l""gT*'Ik#0'K",77
+447,12,4,UPValenciaX: Excel: Fundamentos y herramientas,5pulwu74,"l""gT*'Ik#0'K",79
+448,12,4,MITx: Introduction to Biology - The Secret of Life,5pulwu74,"l""gT*'Ik#0'K",86
+449,13,5,HarvardX: The Architectural Imagination,8lhal3yn,@Jf$]=*bd&>l,60
+450,13,5,UPValenciaX: Marketing digital en redes sociales,8lhal3yn,@Jf$]=*bd&>l,131
+451,13,5,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,8lhal3yn,@Jf$]=*bd&>l,143
+452,13,5,TecdeMonterreyX: Liderazgo y comportamiento organizacional,8lhal3yn,@Jf$]=*bd&>l,200
+453,13,5,TokyoTechX: Japanese Architecture and Structural Design,8lhal3yn,@Jf$]=*bd&>l,218
+454,13,5,DelftX: Sustainable Building with Timber,8lhal3yn,@Jf$]=*bd&>l,352
+455,13,5,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,8lhal3yn,@Jf$]=*bd&>l,402
+456,13,5,UQx: Introduction to Korean Studies,8lhal3yn,@Jf$]=*bd&>l,424
+457,13,5,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",8lhal3yn,@Jf$]=*bd&>l,457
+458,13,4,TUMx: Lean Production,8lhal3yn,@Jf$]=*bd&>l,0
+459,13,4,UWashingtonX: Preparing to Network in English,8lhal3yn,@Jf$]=*bd&>l,1
+460,13,4,"UPValenciaX: Power BI para los negocios, herramientas de productividad",8lhal3yn,@Jf$]=*bd&>l,2
+461,13,4,HP: From Code to Creation: Mastering Game Programming,8lhal3yn,@Jf$]=*bd&>l,3
+462,13,4,FedericaX: Robotics Foundations I - Robot Modeling,8lhal3yn,@Jf$]=*bd&>l,5
+463,13,4,"UMD, USMx: Marketing Innovative Products and Services",8lhal3yn,@Jf$]=*bd&>l,6
+464,13,4,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",8lhal3yn,@Jf$]=*bd&>l,7
+465,13,4,AlaskaX: GIS Image Analysis in ArcGIS Pro,8lhal3yn,@Jf$]=*bd&>l,8
+466,13,4,RITx: Data Representation and Visualization in Tableau,8lhal3yn,@Jf$]=*bd&>l,9
+467,13,4,IMFx: Macroeconomic Diagnostics,8lhal3yn,@Jf$]=*bd&>l,10
+468,13,4,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,8lhal3yn,@Jf$]=*bd&>l,11
+469,13,4,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",8lhal3yn,@Jf$]=*bd&>l,12
+470,13,4,UBCx: How to Code: Complex Data,8lhal3yn,@Jf$]=*bd&>l,13
+471,13,4,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,8lhal3yn,@Jf$]=*bd&>l,15
+472,13,4,DelftX: Calculus II: Multivariable Functions,8lhal3yn,@Jf$]=*bd&>l,16
+473,13,4,NYIF: Risk Management and Credit Principles,8lhal3yn,@Jf$]=*bd&>l,17
+474,13,4,"SDGAcademyX: One Planet, One Ocean",8lhal3yn,@Jf$]=*bd&>l,18
+475,13,4,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,8lhal3yn,@Jf$]=*bd&>l,19
+476,13,4,UBCx: Video Game Writing Essentials,8lhal3yn,@Jf$]=*bd&>l,20
+477,14,1,Accounting Analysis I: Measurement and Disclosure of Assets,iq5yvn7n,":cD,8.?dm^dY",2577
+478,14,2,Parallel programming,iq5yvn7n,":cD,8.?dm^dY",6284
+479,14,2,Packet Switching Networks and Algorithms,iq5yvn7n,":cD,8.?dm^dY",6285
+480,14,2,Operations Research (3): Theory,iq5yvn7n,":cD,8.?dm^dY",6288
+481,14,2,Operations Research (2): Optimization Algorithms,iq5yvn7n,":cD,8.?dm^dY",6289
+482,14,2,Motion Planning for Self-Driving Cars,iq5yvn7n,":cD,8.?dm^dY",6294
+483,14,2,Mathematical Thinking in Computer Science,iq5yvn7n,":cD,8.?dm^dY",6300
+484,14,2,Mathematical Foundations for Cryptography,iq5yvn7n,":cD,8.?dm^dY",6301
+485,14,2,Mastering Programming with MATLAB,iq5yvn7n,":cD,8.?dm^dY",6302
+486,14,2,Parallel Programming in Java,iq5yvn7n,":cD,8.?dm^dY",6307
+487,14,2,Pattern Discovery in Data Mining,iq5yvn7n,":cD,8.?dm^dY",6309
+488,14,2,Programming for Everybody (Getting Started with Python),iq5yvn7n,":cD,8.?dm^dY",6315
+489,14,2,Principles of Computing (Part 2),iq5yvn7n,":cD,8.?dm^dY",6326
+490,14,2,Principles of Computing (Part 1),iq5yvn7n,":cD,8.?dm^dY",6329
+491,14,2,Genome Assembly Programming Challenge,iq5yvn7n,":cD,8.?dm^dY",6341
+492,14,2,Fundamentals of Java Programming,iq5yvn7n,":cD,8.?dm^dY",6342
+493,14,2,Foundations of Computer Science,iq5yvn7n,":cD,8.?dm^dY",6344
+494,14,2,Ethical Issues in AI and Professional Ethics,iq5yvn7n,":cD,8.?dm^dY",6348
+495,14,2,Discrete Optimization,iq5yvn7n,":cD,8.?dm^dY",6353
+496,14,2,Development of Real-Time Systems,iq5yvn7n,":cD,8.?dm^dY",6357
+497,14,3,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,iq5yvn7n,":cD,8.?dm^dY",460
+498,14,3,Building Data Visualization Tools,iq5yvn7n,":cD,8.?dm^dY",6395
+499,14,3,Biomedical Visualisation,iq5yvn7n,":cD,8.?dm^dY",6412
+500,14,3,Bioconductor for Genomic Data Science,iq5yvn7n,":cD,8.?dm^dY",6413
+501,14,3,Bayesian Statistics: Techniques and Models,iq5yvn7n,":cD,8.?dm^dY",6416
+502,14,3,Bayesian Statistics: From Concept to Data Analysis,iq5yvn7n,":cD,8.?dm^dY",6417
+503,14,3,Building R Packages,iq5yvn7n,":cD,8.?dm^dY",6420
+504,14,3,Bayesian Statistics,iq5yvn7n,":cD,8.?dm^dY",6433
+505,14,3,Computer Vision Basics,iq5yvn7n,":cD,8.?dm^dY",6439
+506,14,3,Camera and Imaging,iq5yvn7n,":cD,8.?dm^dY",6441
+507,14,3,Business Writing,iq5yvn7n,":cD,8.?dm^dY",6445
+508,14,3,Artificial Intelligence on Microsoft Azure,iq5yvn7n,":cD,8.?dm^dY",6448
+509,14,3,A Complete Reinforcement Learning System (Capstone),iq5yvn7n,":cD,8.?dm^dY",6452
+510,14,3,3D Reconstruction - Single Viewpoint,iq5yvn7n,":cD,8.?dm^dY",6453
+511,14,3,AR (Augmented Reality) & Video Streaming Services Emerging Technologies,iq5yvn7n,":cD,8.?dm^dY",6478
+512,14,3,Applying Data Analytics in Finance,iq5yvn7n,":cD,8.?dm^dY",6479
+513,14,3,Advanced AI Techniques for the Supply Chain,iq5yvn7n,":cD,8.?dm^dY",6489
+514,14,3,AI and Climate Change,iq5yvn7n,":cD,8.?dm^dY",6502
+515,14,3,Introduction to Business Analytics with R,iq5yvn7n,":cD,8.?dm^dY",6742
+516,14,4,HarvardX: The Architectural Imagination,iq5yvn7n,":cD,8.?dm^dY",60
+517,14,4,UPValenciaX: Marketing digital en redes sociales,iq5yvn7n,":cD,8.?dm^dY",131
+518,14,4,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,iq5yvn7n,":cD,8.?dm^dY",143
+519,14,4,TecdeMonterreyX: Liderazgo y comportamiento organizacional,iq5yvn7n,":cD,8.?dm^dY",200
+520,14,4,TokyoTechX: Japanese Architecture and Structural Design,iq5yvn7n,":cD,8.?dm^dY",218
+521,14,4,DelftX: Sustainable Building with Timber,iq5yvn7n,":cD,8.?dm^dY",352
+522,14,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,iq5yvn7n,":cD,8.?dm^dY",402
+523,14,4,UQx: Introduction to Korean Studies,iq5yvn7n,":cD,8.?dm^dY",424
+524,14,4,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",iq5yvn7n,":cD,8.?dm^dY",457
+525,14,5,TUMx: Lean Production,iq5yvn7n,":cD,8.?dm^dY",0
+526,14,5,UWashingtonX: Preparing to Network in English,iq5yvn7n,":cD,8.?dm^dY",1
+527,14,5,"UPValenciaX: Power BI para los negocios, herramientas de productividad",iq5yvn7n,":cD,8.?dm^dY",2
+528,14,5,HP: From Code to Creation: Mastering Game Programming,iq5yvn7n,":cD,8.?dm^dY",3
+529,14,5,FedericaX: Robotics Foundations I - Robot Modeling,iq5yvn7n,":cD,8.?dm^dY",5
+530,14,5,"UMD, USMx: Marketing Innovative Products and Services",iq5yvn7n,":cD,8.?dm^dY",6
+531,14,5,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",iq5yvn7n,":cD,8.?dm^dY",7
+532,14,5,AlaskaX: GIS Image Analysis in ArcGIS Pro,iq5yvn7n,":cD,8.?dm^dY",8
+533,14,5,RITx: Data Representation and Visualization in Tableau,iq5yvn7n,":cD,8.?dm^dY",9
+534,14,5,IMFx: Macroeconomic Diagnostics,iq5yvn7n,":cD,8.?dm^dY",10
+535,14,5,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,iq5yvn7n,":cD,8.?dm^dY",11
+536,14,5,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",iq5yvn7n,":cD,8.?dm^dY",12
+537,14,5,UBCx: How to Code: Complex Data,iq5yvn7n,":cD,8.?dm^dY",13
+538,14,5,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,iq5yvn7n,":cD,8.?dm^dY",15
+539,14,5,DelftX: Calculus II: Multivariable Functions,iq5yvn7n,":cD,8.?dm^dY",16
+540,14,5,NYIF: Risk Management and Credit Principles,iq5yvn7n,":cD,8.?dm^dY",17
+541,14,5,"SDGAcademyX: One Planet, One Ocean",iq5yvn7n,":cD,8.?dm^dY",18
+542,14,5,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,iq5yvn7n,":cD,8.?dm^dY",19
+543,14,5,UBCx: Video Game Writing Essentials,iq5yvn7n,":cD,8.?dm^dY",20
+544,14,1,Financial Analysis for Startups,iq5yvn7n,":cD,8.?dm^dY",6506
+545,14,1,Financial Accounting: Foundations,iq5yvn7n,":cD,8.?dm^dY",6507
+546,14,1,Financial Accounting: Advanced Topics,iq5yvn7n,":cD,8.?dm^dY",6508
+547,14,1,Finance for Startups,iq5yvn7n,":cD,8.?dm^dY",6513
+548,14,1,Finance for Non-Financial Professionals,iq5yvn7n,":cD,8.?dm^dY",6514
+549,14,1,Finance for Managers,iq5yvn7n,":cD,8.?dm^dY",6524
+550,14,1,Finance For Everyone: Value,iq5yvn7n,":cD,8.?dm^dY",6525
+551,14,1,Federal Taxation II: Property Transactions of Business Owners and Shareholders,iq5yvn7n,":cD,8.?dm^dY",6526
+552,14,1,Financial Reporting Capstone,iq5yvn7n,":cD,8.?dm^dY",6529
+553,14,1,"Financial Statements, SEC Filings and Ratio Analysis",iq5yvn7n,":cD,8.?dm^dY",6530
+554,14,1,Finanzas para profesionales no financieros,iq5yvn7n,":cD,8.?dm^dY",6531
+555,14,1,"Introduction to Financial Analysis - The ""Why?""",iq5yvn7n,":cD,8.?dm^dY",6533
+556,14,1,Introduction to Financial Accounting,iq5yvn7n,":cD,8.?dm^dY",6534
+557,14,1,Introduction to Finance: The Basics,iq5yvn7n,":cD,8.?dm^dY",6536
+558,14,1,Introduction to Accounting Data Analytics and Visualization,iq5yvn7n,":cD,8.?dm^dY",6538
+559,14,1,International Business Operations,iq5yvn7n,":cD,8.?dm^dY",6539
+560,14,1,Fundamentals of financial and management accounting,iq5yvn7n,":cD,8.?dm^dY",6551
+561,14,1,Fundamentals of Accounting Capstone,iq5yvn7n,":cD,8.?dm^dY",6555
+562,14,1,Fundamentals of Accounting and Reporting,iq5yvn7n,":cD,8.?dm^dY",6556
+563,14,2,"Dynamic Programming, Greedy Algorithms",iq5yvn7n,":cD,8.?dm^dY",6363
+564,15,4,JaverianaX: Photoshop: una herramienta para presentaciones innovadoras,z6nblwsh,^<V0dr/)3w(r,460
+565,15,4,HarvardX: The Architectural Imagination,z6nblwsh,^<V0dr/)3w(r,60
+566,15,4,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,z6nblwsh,^<V0dr/)3w(r,143
+567,15,4,TokyoTechX: Japanese Architecture and Structural Design,z6nblwsh,^<V0dr/)3w(r,218
+568,15,4,DelftX: Sustainable Building with Timber,z6nblwsh,^<V0dr/)3w(r,352
+569,15,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,z6nblwsh,^<V0dr/)3w(r,402
+570,15,4,UQx: Introduction to Korean Studies,z6nblwsh,^<V0dr/)3w(r,424
+571,15,4,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",z6nblwsh,^<V0dr/)3w(r,457
+572,15,3,TUMx: Lean Production,z6nblwsh,^<V0dr/)3w(r,0
+573,15,2,UWashingtonX: Preparing to Network in English,z6nblwsh,^<V0dr/)3w(r,1
+574,15,3,"UPValenciaX: Power BI para los negocios, herramientas de productividad",z6nblwsh,^<V0dr/)3w(r,2
+575,15,3,HP: From Code to Creation: Mastering Game Programming,z6nblwsh,^<V0dr/)3w(r,3
+576,15,2,FedericaX: Robotics Foundations I - Robot Modeling,z6nblwsh,^<V0dr/)3w(r,5
+577,15,3,"UMD, USMx: Marketing Innovative Products and Services",z6nblwsh,^<V0dr/)3w(r,6
+578,15,3,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",z6nblwsh,^<V0dr/)3w(r,7
+579,15,2,AlaskaX: GIS Image Analysis in ArcGIS Pro,z6nblwsh,^<V0dr/)3w(r,8
+580,15,3,RITx: Data Representation and Visualization in Tableau,z6nblwsh,^<V0dr/)3w(r,9
+581,15,2,IMFx: Macroeconomic Diagnostics,z6nblwsh,^<V0dr/)3w(r,10
+582,15,3,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,z6nblwsh,^<V0dr/)3w(r,11
+583,15,2,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",z6nblwsh,^<V0dr/)3w(r,12
+584,15,3,UBCx: How to Code: Complex Data,z6nblwsh,^<V0dr/)3w(r,13
+585,15,3,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,z6nblwsh,^<V0dr/)3w(r,15
+586,15,2,DelftX: Calculus II: Multivariable Functions,z6nblwsh,^<V0dr/)3w(r,16
+587,15,2,NYIF: Risk Management and Credit Principles,z6nblwsh,^<V0dr/)3w(r,17
+588,15,2,"SDGAcademyX: One Planet, One Ocean",z6nblwsh,^<V0dr/)3w(r,18
+589,15,3,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,z6nblwsh,^<V0dr/)3w(r,19
+590,15,3,UBCx: Video Game Writing Essentials,z6nblwsh,^<V0dr/)3w(r,20
+591,15,4,DelftX: Efficient HVAC Systems,z6nblwsh,^<V0dr/)3w(r,538
+592,15,4,"DelftX, WageningenX: Sustainable Urban Development",z6nblwsh,^<V0dr/)3w(r,604
+593,15,4,DelftX: Global Housing Design,z6nblwsh,^<V0dr/)3w(r,655
+594,15,4,DelftX: Circular Economy for a Sustainable Built Environment,z6nblwsh,^<V0dr/)3w(r,886
+595,15,4,DelftX: Energy Demand in Buildings,z6nblwsh,^<V0dr/)3w(r,890
+596,15,4,EPFLx: Advanced Timber Plate Structural Design,z6nblwsh,^<V0dr/)3w(r,897
+597,15,4,FedericaX: Theatre and set design,z6nblwsh,^<V0dr/)3w(r,907
+598,15,3,EC-Council: Digital Forensics Essentials (DFE),z6nblwsh,^<V0dr/)3w(r,21
+599,15,3,"IBM: Introduction to Cloud Native, DevOps, Agile, and NoSQL",z6nblwsh,^<V0dr/)3w(r,22
+600,15,3,IBM: Python for Data Engineering Project,z6nblwsh,^<V0dr/)3w(r,23
+601,15,2,UCx: A Better Start to Reading,z6nblwsh,^<V0dr/)3w(r,24
+602,15,2,"UMD, USMx: The Industry and Profession in Construction Management",z6nblwsh,^<V0dr/)3w(r,25
+603,15,2,HarvardX: We the People: Civic Engagement in a Constitutional Democracy,z6nblwsh,^<V0dr/)3w(r,26
+604,15,3,UWashingtonX: Strategic Applications of IT Project & Program Management,z6nblwsh,^<V0dr/)3w(r,28
+605,15,3,WOBI: How to Influence the Consumer Behavior to Drive Sales by Jonah Berger,z6nblwsh,^<V0dr/)3w(r,32
+606,15,2,WBGx: Solid Waste Management,z6nblwsh,^<V0dr/)3w(r,29
+607,15,2,"MITx: Policy for Science, Technology and Innovation",z6nblwsh,^<V0dr/)3w(r,30
+608,15,2,UQx: Introduction to Developmental Psychology,z6nblwsh,^<V0dr/)3w(r,40
+609,15,2,AdelaideX: World of Wine: From Grape to Glass,z6nblwsh,^<V0dr/)3w(r,41
+610,15,2,"HarvardX: Citizen Politics in America: Public Opinion, Elections, Interest Groups, and the Media",z6nblwsh,^<V0dr/)3w(r,45
+611,15,2,HarvardX: Justice,z6nblwsh,^<V0dr/)3w(r,52
+612,15,2,WellesleyX: Italian Language and Culture: Beginner (2023-2024),z6nblwsh,^<V0dr/)3w(r,56
+613,15,3,IBM: Technical Support Basics for Everyone,z6nblwsh,^<V0dr/)3w(r,27
+614,15,3,AWS: Building Modern Python Applications on AWS,z6nblwsh,^<V0dr/)3w(r,34
+615,15,4,HarvardX: Japanese Books: From Manuscript to Print,z6nblwsh,^<V0dr/)3w(r,600
+616,15,4,SDGAcademyX: Living Heritage and Sustainable Development,z6nblwsh,^<V0dr/)3w(r,693
+617,15,4,Craft Your Cover Letter,z6nblwsh,^<V0dr/)3w(r,1443
+618,16,4,HarvardX: The Architectural Imagination,of42lkat,5lMR+|w>v>)#,60
+619,16,4,HarvardX: Pyramids of Giza: Ancient Egyptian Art and Archaeology,of42lkat,5lMR+|w>v>)#,143
+620,16,4,TokyoTechX: Japanese Architecture and Structural Design,of42lkat,5lMR+|w>v>)#,218
+621,16,4,DelftX: Sustainable Building with Timber,of42lkat,5lMR+|w>v>)#,352
+622,16,4,UPValenciaX: Sustainability in Architecture: An Interdisciplinary Introduction,of42lkat,5lMR+|w>v>)#,402
+623,16,4,UQx: Introduction to Korean Studies,of42lkat,5lMR+|w>v>)#,424
+624,16,4,"WageningenX: Circular Fashion: Design, Science and Value in a Sustainable Clothing Industry",of42lkat,5lMR+|w>v>)#,457
+625,16,3,TUMx: Lean Production,of42lkat,5lMR+|w>v>)#,0
+626,16,3,UWashingtonX: Preparing to Network in English,of42lkat,5lMR+|w>v>)#,1
+627,16,3,"UPValenciaX: Power BI para los negocios, herramientas de productividad",of42lkat,5lMR+|w>v>)#,2
+628,16,3,HP: From Code to Creation: Mastering Game Programming,of42lkat,5lMR+|w>v>)#,3
+629,16,3,FedericaX: Robotics Foundations I - Robot Modeling,of42lkat,5lMR+|w>v>)#,5
+630,16,3,"UMD, USMx: Marketing Innovative Products and Services",of42lkat,5lMR+|w>v>)#,6
+631,16,3,"ISCEA: Sustainable Supply Chain Planning, Sourcing, and Procurement",of42lkat,5lMR+|w>v>)#,7
+632,16,3,AlaskaX: GIS Image Analysis in ArcGIS Pro,of42lkat,5lMR+|w>v>)#,8
+633,16,3,RITx: Data Representation and Visualization in Tableau,of42lkat,5lMR+|w>v>)#,9
+634,16,3,IMFx: Macroeconomic Diagnostics,of42lkat,5lMR+|w>v>)#,10
+635,16,3,SDGAcademyX: Tech for Good: The Role of ICT in Achieving the SDGs,of42lkat,5lMR+|w>v>)#,11
+636,16,3,"MITx: Circuits and Electronics 2: Amplification, Speed, and Delay",of42lkat,5lMR+|w>v>)#,12
+637,16,3,UBCx: How to Code: Complex Data,of42lkat,5lMR+|w>v>)#,13
+638,16,3,IDBx: Liderazgo femenino: potencia tus habilidades e impulsa el cambio,of42lkat,5lMR+|w>v>)#,15
+639,16,3,DelftX: Calculus II: Multivariable Functions,of42lkat,5lMR+|w>v>)#,16
+640,16,3,NYIF: Risk Management and Credit Principles,of42lkat,5lMR+|w>v>)#,17
+641,16,3,"SDGAcademyX: One Planet, One Ocean",of42lkat,5lMR+|w>v>)#,18
+642,16,3,State-Bank-of-India: Relationship Marketing Strategy for Financial Services,of42lkat,5lMR+|w>v>)#,19
+643,16,4,DelftX: Efficient HVAC Systems,of42lkat,5lMR+|w>v>)#,538
+644,16,4,"DelftX, WageningenX: Sustainable Urban Development",of42lkat,5lMR+|w>v>)#,604
+645,16,4,DelftX: Global Housing Design,of42lkat,5lMR+|w>v>)#,655
+646,16,4,DelftX: Circular Economy for a Sustainable Built Environment,of42lkat,5lMR+|w>v>)#,886
+647,16,4,DelftX: Energy Demand in Buildings,of42lkat,5lMR+|w>v>)#,890
+648,16,4,EPFLx: Advanced Timber Plate Structural Design,of42lkat,5lMR+|w>v>)#,897
+649,16,4,FedericaX: Theatre and set design,of42lkat,5lMR+|w>v>)#,907
+650,16,4,HarvardX: Japanese Books: From Manuscript to Print,of42lkat,5lMR+|w>v>)#,600
+651,16,4,SDGAcademyX: Living Heritage and Sustainable Development,of42lkat,5lMR+|w>v>)#,693
+652,16,4,Craft Your Cover Letter,of42lkat,5lMR+|w>v>)#,1443
+653,16,4,Self-Reflection On Your Career Pathway,of42lkat,5lMR+|w>v>)#,1446
+654,16,4,Optimize Your GitHub Profile,of42lkat,5lMR+|w>v>)#,1450
