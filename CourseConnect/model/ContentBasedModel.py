@@ -4,7 +4,7 @@ def get_recommendations(courses_names):
     if(len(courses_names) == 0):
         return "None"
     # Load the DataFrame from the file using pickle
-    with open('D:\T\ASU FOE\Senior 2\Graduation Project\Part (2)\CourseConnect Project\myenv\CourseConnect\model\df_pickle', 'rb') as f:
+    with open('df_pickle', 'rb') as f:
         similarity_df = pickle.load(f)
     
     num_courses = len(courses_names)
