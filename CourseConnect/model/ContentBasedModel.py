@@ -3,7 +3,7 @@ import pickle
 def get_recommendations(courses_names):
     if(len(courses_names) == 0):
         return "None"
-    # Load the DataFrame from the file using pickle
+    # Load the DataFrame from the file using pickle        #Download this file (df_pickle) from here: https://drive.google.com/file/d/1JblyDo5L62eZlwi39wZFGneaxuRnO6FD/view?usp=sharing    
     with open('df_pickle', 'rb') as f:
         similarity_df = pickle.load(f)
     
