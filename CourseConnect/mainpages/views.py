@@ -19,6 +19,7 @@ from django.http import JsonResponse, HttpResponse
 from itertools import chain
 import json
 import datetime
+from . filters import OrderFilter
 ##---for recommendation models---##
 import sys
 sys.path.append("..")
@@ -50,6 +51,16 @@ def courses(request):
         return render(request, 'pages/courses.html', context)
     else:
         return render(request, 'pages/courses.html')
+
+def filters_view(request):
+     myFilter = OrderFilter(request.GET, queryset=Course.objects.all())
+     if request.GET:  # Check if the filter form has been submitted
+        courses = myFilter.qs
+     else:
+        courses = Course.objects.all()   
+     context = {'courses': courses,'myFilter':myFilter}
+     return render(request, 'pages/filters.html', context)
+
 
 def category(request, foo):
     #Replace hyphens with spaces.
