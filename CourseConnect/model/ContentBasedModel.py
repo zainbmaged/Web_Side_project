@@ -1,11 +1,17 @@
 import pickle
+import os
 
 def get_recommendations(courses_names):
     if(len(courses_names) == 0):
         return "None"
-    # Load the DataFrame from the file using pickle        #Download this file (df_pickle) from here: https://drive.google.com/file/d/1JblyDo5L62eZlwi39wZFGneaxuRnO6FD/view?usp=sharing    
-    with open('df_pickle', 'rb') as f:
-        similarity_df = pickle.load(f)
+    # Load the DataFrame from the file using pickle
+    #with open('df_pickle', 'rb') as f:
+    #   similarity_df = pickle.load(f)
+    here = os.path.dirname(os.path.abspath(__file__))
+    filename = os.path.join(here, 'df_pickle')  #Download this file "df_pickle" from here: https://drive.google.com/file/d/1JblyDo5L62eZlwi39wZFGneaxuRnO6FD/view?usp=sharing
+    file = open(filename, 'rb')                 #And put the file in the same directory as "ContentBasedModel.py"
+    similarity_df = pickle.load(file)
+    file.close()
     
     num_courses = len(courses_names)
     recommendations_per_course = 20 // num_courses  # Integer division to distribute 

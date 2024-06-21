@@ -47,8 +47,8 @@ def train_random_forest_regressor(reviewed_courses, label_encoders):
     params = {
         "n_estimators": 200,
         "max_depth": None,
-        "min_samples_split": 2,
-        "min_samples_leaf": 1
+        #"min_samples_split": 2,
+        #"min_samples_leaf": 1
     }
 
     # Train the Random Forest regressor
@@ -61,7 +61,7 @@ def train_random_forest_regressor(reviewed_courses, label_encoders):
 
     return regressor
 
-def predict_top_rated_courses(unrated_courses, regressor, label_encoders, top_n=20):
+def predict_top_rated_courses(unrated_courses, regressor, label_encoders, top_n=10):
     # Collect features for unrated courses
     features = []
     fields = ['Level', 'Language', 'Platform', 'Certificate', 'Duration', 'Category', 'Learning_Type', 'Instructors']
@@ -94,19 +94,32 @@ def predict_top_rated_courses(unrated_courses, regressor, label_encoders, top_n=
 
     # Get top rated courses with titles
     top_rated_courses_decoded = []
-    for course, rating in courses_with_ratings[:top_n]:
+    for (course, rating) in courses_with_ratings[:top_n]:
         decoded_course = {
             'Title': course.Title,
-            'Level': label_encoders[0].inverse_transform([X[0, 0].astype(int)])[0],  
-            'Language': label_encoders[1].inverse_transform([X[0, 1].astype(int)])[0],  
-            'Rating': course.Rating,
-            'Platform': label_encoders[2].inverse_transform([X[0, 2].astype(int)])[0],  
-            'Certificate': label_encoders[3].inverse_transform([X[0, 3].astype(int)])[0],  
-            'Duration': label_encoders[4].inverse_transform([X[0, 4].astype(int)])[0],  
-            'Category': label_encoders[5].inverse_transform([X[0, 5].astype(int)])[0],  
-            'Learning_Type': label_encoders[6].inverse_transform([X[0, 6].astype(int)])[0],  
-            'Instructors': label_encoders[7].inverse_transform([X[0, 7].astype(int)])[0],  
-            'Predicted Rating': rating
+            'Rating':course.Rating,
+            'Level': course.Level,
+            #label_encoders[0].inverse_transform([int(X[i, 0])])[0],
+            'Language': course.Language,
+            'URL':course.URL,
+            'rating': rating,
+            #label_encoders[1].inverse_transform([int(X[i, 1])])[0],
+            'Platform': course.Platform,
+            #label_encoders[2].inverse_transform([int(X[i, 2])])[0],
+            'Certificate': course.Certificate,
+            #label_encoders[3].inverse_transform([int(X[i, 3])])[0],
+            'Duration':course.Duration,
+             # label_encoders[4].inverse_transform([int(X[i, 4])])[0],
+            'Category': course.Category,
+            #label_encoders[5].inverse_transform([int(X[i, 5])])[0],
+            'Learning_Type': course.Learning_Type,
+            'Enrolled': course.Enrolled,
+            'Reviews': course.Reviews,
+            'Last Updated': course.Last_Updated,
+            #label_encoders[6].inverse_transform([int(X[i, 6])])[0],
+            'Instructors': course.Instructors,
+            ##label_encoders[7].inverse_transform([int(X[i, 7])])[0],
+          
         }
         top_rated_courses_decoded.append(decoded_course)
 
