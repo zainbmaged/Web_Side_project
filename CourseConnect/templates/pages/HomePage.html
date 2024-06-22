@@ -50,7 +50,8 @@
 
 <style>
   * {box-sizing:border-box}
-
+</style>
+   
 /* Slideshow container */
 .slideshow-container {
   max-width: 1600px;
@@ -169,6 +170,7 @@ function showSlides() {
 <br><br>
 <br><br>
 <br><br>
+
 <br><br>
 <br><br>
 <br><br>
@@ -177,11 +179,53 @@ function showSlides() {
 <br><br>
 <br><br>
 <br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
+<!-- Cards Section -->
+<div class="row conter">
+  <img style="width: 5%; left: 47%;top:8%;  position: relative" src="{% static 'Images/home1.svg' %}">
+  <div style="width: 100%; top:7%;  position: relative; text-align: center; color: #060640; font-size: 45px; font-family: Actor; font-weight: 400; line-height: 55px; word-wrap: break-word">User Guide</div>
+  
+</div>
+
+<div class="row conter">
+  <div class="row">
+    <div class="col">
+      <div class="card" style="margin:5%">
+   
+        <div class="card-body">
+          <h5 class="card-title">Step 1</h5>
+          <p class="card-text" style="top:5%;left:2%;color:#000000;text-align:left">Create your account you may search for courses and review them from nav bar or from your profile</p>
+          {% if user.is_authenticated %}<a href="{% url 'userprofile' user.username %}" class="btn btn-primary">Sign Up/Sign In</a>{% else %}<a href="login" class="btn btn-primary">Sign Up/Sign In</a>{% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="margin:5%">
+       
+        <div class="card-body">
+          <h5 class="card-title">Step 2</h5>
+          <p class="card-text" style="top:5%;left:2%;color:#000000;text-align:left">from Recommendations dropdown menu in nav bar you may find similar courses to those you like </p>
+          {% if user.is_authenticated %}<a href="{% url 'recommendations' user.username %}" class="btn btn-primary">Similar Courses</a>{% else %}<a href="login" class="btn btn-primary">Similar Courses</a>{% endif %}
+        </div>
+      </div>
+    </div>
+    <div class="col">
+      <div class="card" style="margin:5%">
+     
+        <div class="card-body">
+          <h5 class="card-title">Step 3</h5>
+          <p class="card-text" style="top:5%;left:2%;color:#000000;text-align:left">If you reviewed 20 course a new personlized recommender will be available to you in Recommendations drop down menu</p>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Cards Section -->
+<div class="row conter">
+  <img style="width: 5%; left: 47%;top:8%;  position: relative" src="{% static 'Images/home1.svg' %}">
+  <div style="width: 100%; top:7%;  position: relative; text-align: center; color: #060640; font-size: 45px; font-family: Actor; font-weight: 400; line-height: 55px; word-wrap: break-word">In this Website you may</div>
+  
+</div>
 <div class="row conter">
 <div class="row">
   <div class="col">
@@ -190,7 +234,7 @@ function showSlides() {
       <div class="card-body">
         <h5 class="card-title">Find  Courses</h5>
         <p class="card-text" style=" top:5%;left:2%;color:#000000;text-align:left">Find the course you are looking for from all the leading courses' websites with one click.</p>
-        <a href="login" class="btn btn-primary">Sign Up/Sign In</a>
+        <a href="filters" class="btn btn-primary">Search</a>
       </div>
     </div>
   </div>
@@ -210,7 +254,7 @@ function showSlides() {
       <div class="card-body">
         <h5 class="card-title">Keep track of your courses</h5>
         <p class="card-text"style=" top:5%;left:2%;color:#000000;text-align:left">save courses for later  , manage taken courses, focus on your skills and more.</p>
-        <a href="#" class="btn btn-primary">My Course</a>
+        <a href="#" class="btn btn-primary">My Courses</a>
       </div>
     </div>
   </div>

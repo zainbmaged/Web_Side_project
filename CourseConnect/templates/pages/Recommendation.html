@@ -1,9 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
-{% block title %}Top Recommendations for {{ user.username }}{% endblock title %}
+{% block title %}Similar Courses{% endblock title %}
 {% block content %}
 <br>
-<h2>My Recommendations:</h2>
+<h2>Top Recommendations for {{ user.username }}:</h2>
 
 {% for c in courses %}
     <h2>{{ c }}</h2>

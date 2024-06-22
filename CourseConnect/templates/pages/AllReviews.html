@@ -39,9 +39,15 @@
                     <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
                     <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
                     <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% elif review.rating == 3.5 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color:gray;"></i>
+                    <i class="my-btn fa fa-star-half checked" id="second" aria-hidden="true" style="color:red;"></i>
+                    <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
                 {% elif review.rating == 4 %}
                     <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color: gray;"></i>
-                    <i class="my-btn fa fa-star checked" id="second" aria-hidden="true"></i>
+                    <i class="my-btn fa-solid fa-star checked" id="second" aria-hidden="true"></i>
                     <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
                     <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
                     <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
