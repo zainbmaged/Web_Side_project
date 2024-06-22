@@ -44,7 +44,7 @@ class Course(models.Model):
 class Review(models.Model):
     user = models.ForeignKey(User,  related_name="reviews", on_delete=models.CASCADE)
     course = models.ForeignKey(Course, on_delete=models.CASCADE)
-    rating = models.IntegerField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0)])
+    rating = models.FloatField(default=0, validators=[MaxValueValidator(5), MinValueValidator(0)])
     fullreview = models.CharField(max_length=600, null=True)
     created_at = models.DateTimeField(default=timezone.now, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
@@ -59,7 +59,7 @@ class Review(models.Model):
 #Users Profile
 class Profile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
-    #image = models.ImageField(upload_to='Images/profile_pics', default='Images/defaultprofile.jpg', null=True, blank=True)
+    image = models.ImageField(upload_to='Images/profile_pics', default='Images/defaultprofile.jpg', null=True, blank=True)
     date_modified = models.DateTimeField(User, auto_now=True)
     GENDER_CHOICES = (('M', 'Male'), ('F', 'Female'))
     gender = models.CharField(max_length=1, choices=GENDER_CHOICES, null=True, blank=True)
@@ -171,7 +171,7 @@ class Profile(models.Model):
     
     def __str__(self):
         return f"{self.user.username} Profile"
-'''
+
     def save(self, *args, **kwargs):
         super().save(*args, **kwargs)
         img = Image.open(self.image.path)
@@ -179,16 +179,17 @@ class Profile(models.Model):
             output_size = (350, 350)
             img.thumbnail(output_size)
             img.save(self.image.path)
-'''
-'''
+
+
 class Profile_Skill(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE, unique=True)
     skills =  models.ManyToManyField(Skill)
+    newUser = models.BooleanField(default=False)
 
 
     def __str__(self):
         return f"{self.user.username} has skills: {self.skills}"
-'''   
+  
 
 
 #Users

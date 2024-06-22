@@ -16,7 +16,7 @@ class UserInfoForm(forms.ModelForm):
 		fields = ('gender', 'birthdate', 'language')
 
 class UserReviewForm(forms.ModelForm):
-	rating = forms.IntegerField(validators=[MaxValueValidator(5), MinValueValidator(0)])
+	rating = forms.FloatField(validators=[MaxValueValidator(5), MinValueValidator(0)])
 	fullreview = forms.CharField()
 	class Meta:
 		model = Review
@@ -82,7 +82,7 @@ class UserUpdateForm(forms.ModelForm):
 	def __init__(self, *args, **kwargs):
 		super(UserUpdateForm, self).__init__(*args, **kwargs)
 
-		self.fields['username'].required = False
+		#self.fields['username'].required = False
 		self.fields['email'].required = False
 		self.fields['first_name'].required = False
 		self.fields['last_name'].required = False
@@ -91,7 +91,7 @@ class UserUpdateForm(forms.ModelForm):
 class ProfileUpdateForm(forms.ModelForm):
 	class Meta:
 		model = Profile
-		fields = ['gender', 'birthdate', 'language']
+		fields = ['image', 'gender', 'birthdate', 'language']
 
 	def __init__(self, *args, **kwargs):
 		super(ProfileUpdateForm, self).__init__(*args, **kwargs)

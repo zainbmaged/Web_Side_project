@@ -122,7 +122,7 @@ def register_user(request):
                 if user is not None:
                     login(request, user)
                 messages.success(request, (f"Account created for {username} successfully.\nWelcome!"))
-                return redirect('homepage')
+                return redirect('checkbox')
         else:
             messages.success(request, ("An error occured. Please try again."))
             return redirect('register')
@@ -151,7 +151,8 @@ def profile_skills(request):
     else:
         messages.success(request, ("Please log in first."))
         return render(request, 'pages/LoginPage.html', {"form":form})
-
+'''
+@login_required
 def checkbox(request):
     if request.method=="POST":
         s = request.POST.getlist("chk[]")
@@ -159,7 +160,7 @@ def checkbox(request):
             print(s1)
         return render(request,"pages/SkillsCheckbox.html", {'key':s})
     return render(request,"pages/SkillsCheckbox.html")
-'''
+
 
 @login_required
 def userprofile(request, foo):
@@ -465,11 +466,18 @@ class RecommendationPage(LoginRequiredMixin, ListView):
         reviewed_courses = Course.objects.filter(review__user=user).annotate(rating = F('review__rating'))
         # Call the train_random_forest_regressor function
         regressor = RandomForest.train_random_forest_regressor(reviewed_courses,label_encoders)
-        unrated_courses = Course.objects.exclude(review__user=user)
-        
-        top_rated_courses_decoded = RandomForest.predict_top_rated_courses(unrated_courses, regressor, label_encoders)
+        top_rated_courses_combined = []
 
-        return top_rated_courses_decoded
+        platforms = ['Udacity', 'edX', 'Coursera','Udemy']  # Add more platforms as needed
+        for platform in platforms:
+            unrated_courses_platform = Course.objects.exclude(review__user=user).filter(Platform=platform)
+            top_rated_courses_platform = RandomForest.predict_top_rated_courses(unrated_courses_platform, regressor, label_encoders)
+            top_rated_courses_combined.extend(top_rated_courses_platform)
+        
+        # Optionally, you can sort the combined list by rating or any other criteria
+        top_rated_courses_combined.sort(key=lambda x: x['rating'], reverse=True)
+
+        return top_rated_courses_combined
 
 '''
 def setvalue():
