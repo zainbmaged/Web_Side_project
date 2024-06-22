@@ -73,6 +73,49 @@
             /* Change the background color of the dropdown button when the dropdown content is shown */
             .dropdown:hover .dropbtn {background-color: white;}
         </style>
+        
+            <form>
+                <input id="mySearch" placeholder="Search..">
+                <button id="Searchbtn"><i class="fa fa-search"></i></button>
+            </form>
+        
+        <style>
+
+            form input[type=text] {
+                font-size: 17px;
+                border: none;
+                margin-top: 10px;
+                }
+
+            form input[type=text]:hover {
+                border: 2px solid;
+                border-radius: 5px;
+                }
+
+            #Searchbtn {
+                float: right;
+                padding-bottom: 10px;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+                align-items: center;
+                background-color: white;
+                }
+
+                #Searchbtn i {
+                    margin-left: 10px;
+                }
+
+            #Searchbtn i:hover {
+                color: #9298eb;
+                }
+        </style>
+        <script>
+           document.getElementById("Searchbtn").onclick = function () {
+            const str = document.getElementById("mySearch").value;
+            setTimeout('window.location.href="http://127.0.0.1:8000/filters?Title__icontains=${str}"', 0);
+           };            
+        </script>
         {% if user.is_authenticated %}
             <!-- <a href="#" class="profilelogo"><img src="{% static 'Images/notification.png' %}" alt="profile" style=" border-radius: 50px; width: 2em; height: 2em;"></a> -->
             <div class="dropdown">
