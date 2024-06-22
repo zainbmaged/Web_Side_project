@@ -50,7 +50,7 @@
 
 <style>
   * {box-sizing:border-box}
-</style>
+
    
 /* Slideshow container */
 .slideshow-container {
@@ -194,7 +194,7 @@ function showSlides() {
         <div class="card-body">
           <h5 class="card-title">Step 1</h5>
           <p class="card-text" style="top:5%;left:2%;color:#000000;text-align:left">Create your account you may search for courses and review them from nav bar or from your profile</p>
-          {% if user.is_authenticated %}<a href="{% url 'userprofile' user.username %}" class="btn btn-primary">Sign Up/Sign In</a>{% else %}<a href="login" class="btn btn-primary">Sign Up/Sign In</a>{% endif %}
+          <a href="login" class="btn btn-primary">Sign Up/Sign In</a>
         </div>
       </div>
     </div>
@@ -204,7 +204,7 @@ function showSlides() {
         <div class="card-body">
           <h5 class="card-title">Step 2</h5>
           <p class="card-text" style="top:5%;left:2%;color:#000000;text-align:left">from Recommendations dropdown menu in nav bar you may find similar courses to those you like </p>
-          {% if user.is_authenticated %}<a href="{% url 'recommendations' user.username %}" class="btn btn-primary">Similar Courses</a>{% else %}<a href="login" class="btn btn-primary">Similar Courses</a>{% endif %}
+          <a href="#" class="btn btn-primary">My Course</a>
         </div>
       </div>
     </div>
@@ -234,7 +234,7 @@ function showSlides() {
       <div class="card-body">
         <h5 class="card-title">Find  Courses</h5>
         <p class="card-text" style=" top:5%;left:2%;color:#000000;text-align:left">Find the course you are looking for from all the leading courses' websites with one click.</p>
-        <a href="filters" class="btn btn-primary">Search</a>
+        <a href="login" class="btn btn-primary">Sign Up/Sign In</a>
       </div>
     </div>
   </div>
@@ -254,7 +254,7 @@ function showSlides() {
       <div class="card-body">
         <h5 class="card-title">Keep track of your courses</h5>
         <p class="card-text"style=" top:5%;left:2%;color:#000000;text-align:left">save courses for later  , manage taken courses, focus on your skills and more.</p>
-        <a href="#" class="btn btn-primary">My Courses</a>
+        <a href="#" class="btn btn-primary">My Course</a>
       </div>
     </div>
   </div>

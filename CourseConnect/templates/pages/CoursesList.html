@@ -16,7 +16,6 @@
                         <table class="table table-bordered table-striped">
                             <thead>
                                 <tr>
-                                    <th>ID</th>
                                     <th>Image</th>
                                     <th>Title</th>
                                     <th>Rating</th>
@@ -41,7 +40,6 @@
                             <tbody>
                                 {% for course in courses %}
                                     <tr>
-                                        <td>{{ course.id }}</td>
                                         {% if course.Image %}
                                             <td>
                                                 <img src="static{{course.Image.url}}" alt="" width="80" height="60">
