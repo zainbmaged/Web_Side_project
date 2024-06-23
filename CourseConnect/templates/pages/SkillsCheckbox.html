@@ -1,0 +1,110 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}{{ user.username }}'s Skills{% endblock title %}
+{% block content %}
+<center>
+    <form action="" method="post">
+        {% csrf_token %}
+        <input type="checkbox" name="chk[]" value="Computer Science">Computer Science
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Language">Language
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Electrical Engineering">Electrical Engineering
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Business & Management">Business & Management
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Engineering">Engineering
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Economics & Finance">Economics & Finance
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Communication">Communication
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Electronics">Electronics
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Food & Nutrition">Food & Nutrition
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Math">Math
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Environmental Studies">Environmental Studies
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Education & Teacher Training">Education & Teacher Training
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Social Sciences">Social Sciences
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Humanities">Humanities
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Art & Culture">Art & Culture
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Law">Law
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Science">Science
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Biology & Life Sciences">Biology & Life Sciences
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Medicine">Medicine
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Music">Music
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Architecture">Architecture
+        <br><br>
+        <input type="checkbox" name="chk[]" value="History">History
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Physics">Physics
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Literature">Literature
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Philosophy & Ethics">Philosophy & Ethics
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Design">Design
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Energy & Earth Sciences">Energy & Earth Sciences
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Chemistry">Chemistry
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Health & Safety">Health & Safety
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Cloud Computing">Cloud Computing
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Artificial Intelligence">Artificial Intelligence
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Career Resources">Career Resources
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Programming and Development">Programming and Development
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Product Management">Product Management
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Data Science">Data Science
+        <br><br>
+        <input type="checkbox" name="chk[]" value="DevOps">DevOps
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Cybersecurity">Cybersecurity
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Autonomous Systems">Autonomous Systems
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Web Development">Web Development
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Database Design & Development">Database Design & Development
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Programming Languages">Programming Languages
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Executive Leadership">Executive Leadership
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Digital Marketing">Digital Marketing
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Machine Learning">Machine Learning
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Personal Development">Personal Development
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Information Technology">Information Technology
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Environmental Science and Sustainability">Environmental Science and Sustainability
+        <br><br>
+        <input type="checkbox" name="chk[]" value="Physical Science and Engineering">Physical Science and Engineering
+        <br><br>
+        <input type="submit" name="btnsubmit" value="Submit" />
+    </form>
+
+    {{key}}
+</center>
+
+{% endblock %}

@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+{% block title %}Choose Skills{% endblock title %}
+{% block content %}
+    <form method="POST" action="{% url 'skills' %}">
+        {% csrf_token %}
+        <fieldset>
+            <legend class="border-bottom mb-4">Please Choose Skills</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <br>
+        <div class="form-group">
+            <button class="login-btn font-style font-size" type="submit">Submit</button>
+        </div>
+    </form>
+{% endblock %}

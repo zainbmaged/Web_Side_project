@@ -1,0 +1,289 @@
+{% extends 'base.html' %}
+{% block title %}All Reviews{% endblock title %}
+{% block content %}
+    <br><br><br>
+    {% for review in reviews %}
+    {% if review %}
+    <br><br>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                {% if review.user.first_name %}
+                    <h2 style="margin-left: 0px;">Reviewed by <a href="{% url 'user-reviews' review.user.username %}" style="font-size: 30px;">{{ review.user.first_name }} {{ review.user.last_name }}</a></h2>
+                {% else %}
+                    <h2 style="margin-left: 0px;">Reviewed by <a href="{% url 'user-reviews' review.user.username %}" style="font-size: 30px;">{{ review.user.username }}</a></h2>
+                {% endif %}
+            </div>
+            <div class="col">
+                {% if review.rating == 0 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="second" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="third" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="fourth" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="fifth" aria-hidden="true" style="color: gray;"></i>
+                {% elif review.rating == 1 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="second" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="third" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="fourth" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% elif review.rating == 2 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="second" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star" id="third" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% elif review.rating == 3 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color:gray;"></i>
+                    <i class="my-btn fa fa-star" id="second" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% elif review.rating == 3.5 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color:gray;"></i>
+                    <i class="my-btn fa fa-star-half checked" id="second" aria-hidden="true" style="color:red;"></i>
+                    <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% elif review.rating == 4 %}
+                    <i class="my-btn fa fa-star" id="first" aria-hidden="true" style="color: gray;"></i>
+                    <i class="my-btn fa-solid fa-star checked" id="second" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% elif review.rating == 5 %}
+                    <i class="my-btn fa fa-star checked" id="first" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="second" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="third" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fourth" aria-hidden="true"></i>
+                    <i class="my-btn fa fa-star checked" id="fifth" aria-hidden="true"></i>
+                {% endif %}
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h2>For Course <a href="{% url 'course' review.course.id %}" style="font-size: 25px;">{{ review.course.Title}}</a></h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col">
+                <h5>{{ review.fullreview }}</h5>
+            </div>
+            <div class="col">
+                <div style="float: right; margin-right: 75px;">
+                    <a class="button-51" href="{% url 'review-detail' review.id %}" target="_blank">View</a>
+                </div>
+            </div>
+        </div>
+        <br>
+    </div>
+    <br>
+    
+    {% else %}
+        <h1>No Reviews to Show.</h1>
+    {% endif %}
+    {% endfor %}
+    
+    <!-- Pagination -->
+    {% if is_paginated %}
+            {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3'  %}
+                    <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+
+        {% endif %}
+    
+<style>
+    .checked {
+        color: red;
+    }
+
+    .my-btn {
+        background-color: inherit !important;
+        border: 0 !important;
+        font-size: 50px;
+    }
+
+    .button-51 {
+        background-color: transparent;
+        border: 1px solid #266DB6;
+        box-sizing: border-box;
+        color: #00132C;
+        font-family: "Avenir Next LT W01 Bold", sans-serif;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 24px;
+        padding: 16px 23px;
+        position: relative;
+        text-decoration: none;
+        user-select: none;
+        -webkit-user-select: none;
+        touch-action: manipulation;
+    }
+
+    .button-51:hover, .button-51:active {
+        outline: 0;
+        text-decoration: none;
+    }
+
+    .button-51:hover {
+        background-color: transparent;
+        cursor: pointer;
+        text-decoration: none;
+    }
+
+    .button-51:before {
+        background-color: #D5EDF6;
+        content: "";
+        height: calc(100% + 3px);
+        position: absolute;
+        right: -7px;
+        top: -9px;
+        transition: background-color 300ms ease-in;
+        width: 100%;
+        z-index: -1;
+    }
+
+    .button-51:hover:before {
+        background-color: #6DCFF6;
+    }
+
+    @media (min-width: 768px) {
+    .button-51 {
+        padding: 16px 32px;
+    }
+    }
+</style>
+<script>
+    // Get all stars
+const one = document.getElementById('first')
+const two = document.getElementById('second')
+const three = document.getElementById('third')
+const four = document.getElementById('fourth')
+const five = document.getElementById('fifth')
+
+const form = document.querySelector('.rate-form')
+const confirmBox = document.getElementById('confirm-box')
+
+const rating = document.getElementById('myrating').value
+
+//const csrf = document.getElementsByName('csrfmiddlewaretoken')
+
+const handleStarSelect = (size) => {
+    const children = form.children
+    for (let i=0; i < children.length; i++) {
+        if(i <= size) {
+            children[i].classList.add('checked')
+        } else {
+            children[i].classList.remove('checked')
+        }
+    }
+}
+
+const handleSelect = (selection) => {
+    switch(selection) {
+        case 'first': {
+            handleStarSelect(1)
+            return
+        }
+        case 'second': {
+            handleStarSelect(2)
+            return
+        }
+        case 'third': {
+            handleStarSelect(3)
+            return
+        }
+        case 'fourth': {
+            handleStarSelect(4)
+            return
+        }
+        case 'fifth': {
+            handleStarSelect(5)
+            return
+        }
+    }
+}
+/*
+const getNumericValue = (stringValue) => {
+    let numericValue;
+    if (stringValue == 'first') {
+        numericValue = 1
+    }
+    else if (stringValue == 'second') {
+        numericValue = 2
+    }
+    else if (stringValue == 'third') {
+        numericValue = 3
+    }
+    else if (stringValue == 'fourth') {
+        numericValue = 4
+    }
+    else if (stringValue == 'fifth') {
+        numericValue = 5
+    }
+    else {
+        numericValue = 0
+    }
+    return numericValue
+}
+    
+
+    const arr = [one, two, three, four, five]
+
+    arr.forEach(myFunction)
+
+    function myFunction(item) {
+        handleSelect(item);
+      }
+/*
+    arr.forEach(item => item.addEventListener('click', (event)=>{
+        const val = event.target.id
+
+        let isSubmit = false
+
+        form.addEventListener('submit', e=>{
+            e.preventDefault()
+            
+            if (isSubmit) {
+                return
+            }
+
+            isSubmit = true
+            const id = e.target.id
+            const val_num = getNumericValue(val)
+
+            $.ajax({
+                type: 'POST',
+                url: '/rate/',
+                data: {
+                    'csrfmiddlewaretoken': csrf[0].value,
+                    'el_id': id,
+                    'val': val_num,
+                },
+                success: function(response){
+                    confirmBox.innerHTML = `<h1>Successfully Rated With ${response.rating}</h1>`
+                },
+                error: function(error){
+                    confirmBox.innerHTML = `<h1>Something Went Wrong!!</h1>`
+                },
+            })
+        })
+    }))
+}*/
+
+</script>
+{% endblock %}

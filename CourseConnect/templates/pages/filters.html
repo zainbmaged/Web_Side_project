@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/courses.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'Images/favicon.ico' %}">
+</head>
+
+<body>
+    <div>
+        <div class="cover">
+            <form method="get">
+                {{myFilter.form}}
+                <button type="submit"> Apply </button>
+            </form>
+        </div>
+    </div>
+    <div class="results">
+        {% if courses %}
+        <h2>Filtered Courses ({{ courses.count }})</h2>
+        <ul>
+            {% for course in courses %}
+            <!-- Display other course fields as needed -->
+            <a href = "{{ course.URL }}" style="color: black; display: block;"><b>Title: {{ course.Title }}</b></a>
+            <p style="color: red; display: inline-block;"><b>Price: {{ course.Price }}</b></p>
+            <p style="color: rgb(255, 255, 255); display: inline-block;"><b>Level: {{ course.Level }}</b></p>
+            <p style="color: rgb(10, 208, 0); display: inline-block;"><b>Level: {{ course.Level }}</b></p>
+            <p style="color: blue;"><b>Platform: {{ course.Platform }}</b></p>
+            <br>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>No courses found matching the filter criteria.</p>
+        {% endif %}
+    </div>
+</body>
+
+</html>

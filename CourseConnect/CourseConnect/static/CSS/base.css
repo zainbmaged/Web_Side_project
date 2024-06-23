@@ -1,0 +1,132 @@
+a{
+    font-style: normal;
+    font-family: 'Kdam Thmor Pro', sans-serif;  
+    font-size: 1.3em;    
+    text-decoration: none;
+}
+
+.parent{
+    background: transparent;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav{
+    width: 80%;
+    height: 140px;
+    margin: 10px;
+    padding: 5px;
+    background-color: white;
+    justify-content:space-around;
+    align-items: center;
+    gap: 4rem;
+    border-radius: 20px;
+    display: flex;
+}
+
+nav{
+    position: sticky;
+    z-index: 999;
+    top: 0;
+}
+
+.btn1 ,.btn2{
+    display: inline-flex;
+    height: 55px;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    border-radius:5px;
+    
+}
+.btn2{
+    border: 0px ;
+    background-color: white;
+}
+.btn1{
+    border-radius: 10px;
+    background: hsl(240, 83%, 36%);
+    border: 0px ;
+}
+.btn_a{
+    color: white;
+    text-decoration: none;
+
+}
+.btn2-a:hover{
+    border-bottom: 3px solid #060640;
+    padding-bottom: 3px;
+}
+
+.btn1:hover{
+    border-bottom: 3px  solid white;
+    border-top: 3px  solid white;
+    border-left: 0.5px  solid white;
+    border-right:0.5px  solid white;
+    border-radius: 12px;
+}
+
+.btn2-a{
+    color:black;
+    text-decoration: none;
+}
+
+.logo{
+    width: 8em;
+    height: 5em;
+    z-index: 10;
+    float: left;
+}
+
+.option{
+    text-decoration: none;
+    color: rgba(120, 122, 130, 0.943);
+}
+
+.active2{
+    color: #9298eb !important;
+    background-color: #ddd;
+}
+
+.active, .option:hover{
+    color: #9298eb;
+}
+
+footer{
+    background-color:#060640;
+}
+.logo_foot{
+    width: 10vw;
+    height: 10vh;
+    margin-left: 12%;
+
+}
+p{
+    color: #F6EAEA;
+    text-align: center;
+    font-family: Inter;
+    font-size: 1.5rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    position: relative;
+    right: 25%;
+    bottom: 20%;
+}
+
+body{
+    height: fit-content;
+}
+
+.account{
+    display: flex;
+    gap: 1rem;
+   margin-left: 20vw;
+}
+.profilelogo:hover{
+    resize: 150%;
+}

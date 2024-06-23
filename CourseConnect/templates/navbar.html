@@ -1,0 +1,150 @@
+{% load static %}
+<nav>
+    <div class="parent">
+    <div class="nav" id="NavBar">
+        <a href="{% url 'homepage' %}"><img src="{% static 'Images/Logo_14.png' %}" alt="logo" class="logo"></a>
+        <a href="{% url 'homepage' %}" class="option">Home</a> 
+        <a href="{% url 'allreviews' %}" class="option">Reviews</a>
+        <div class="dropdown">
+            <a href="{% url 'allcourses' %}" class="option">Courses</a>
+            <div class="dropdown-content">
+                <a href="{% url 'category' 'Business-&-Management' %}" class="option2">Business & Management</a>
+                <a href="{% url 'category' 'Computer-Science' %}" class="option2">Computer Science</a>
+                <a href="{% url 'category' 'Math' %}" class="option2">Math</a>
+                <a href="{% url 'category' 'Art-&-Culture' %}" class="option2">Art & Culture</a>
+                <a href="{% url 'category' 'Language' %}" class="option2">Language</a>
+                <a href="{% url 'category' 'Data-Analysis-&-Statistics' %}" class="option2">Data Analysis & Statistics</a>
+                <a href="{% url 'allcourses' %}" class="option2">View All Courses</a>
+            </div>
+        </div>
+        {% if request.user.is_authenticated  %}
+            <div class="dropdown">
+                <a href="{% url 'recommendations' user.username  %}" class="option">Recommendations</a>
+                <div class="dropdown-content">
+                    {% if user.reviews.all.count >= 10 %}
+                    <a href="{% url  'recommendation_page' user.username %}" class="option2">Personalized Recommendations</a>
+                    {% endif %}
+                    <a href="{% url 'recommendations' user.username %}" class="option2">Similar Courses</a> 
+                </div>
+            </div>
+        {% endif %}
+        <style>
+            .dropbtn {
+                background-color: white;
+                color: white;
+                padding: 16px;
+                font-size: 16px;
+                border: none;
+                }
+
+            /* The container <div> - needed to position the dropdown content */
+            .dropdown {
+                position: relative;
+                display: inline-block;
+            }
+
+            /* Dropdown Content (Hidden by Default) */
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f1f1f1;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+                z-index: 1;
+            }
+
+            /* Links inside the dropdown */
+            .dropdown-content a {
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+            }
+
+            /* Change color of dropdown links on hover */
+            .dropdown-content a:hover {
+                color: #9298eb;
+                background-color: #ddd;
+            }
+
+            /* Show the dropdown menu on hover */
+            .dropdown:hover .dropdown-content {display: block;}
+
+            /* Change the background color of the dropdown button when the dropdown content is shown */
+            .dropdown:hover .dropbtn {background-color: white;}
+        </style>
+        
+            <form>
+                <input id="mySearch" placeholder="Search..">
+                <button id="Searchbtn"><i class="fa fa-search"></i></button>
+            </form>
+        
+        <style>
+
+            form input[type=text] {
+                font-size: 17px;
+                border: none;
+                margin-top: 10px;
+                }
+
+            form input[type=text]:hover {
+                border: 2px solid;
+                border-radius: 5px;
+                }
+
+            #Searchbtn {
+                float: right;
+                padding-bottom: 10px;
+                font-size: 17px;
+                border: none;
+                cursor: pointer;
+                align-items: center;
+                background-color: white;
+                }
+
+                #Searchbtn i {
+                    margin-left: 10px;
+                }
+
+            #Searchbtn i:hover {
+                color: #9298eb;
+                }
+        </style>
+        <script>
+           document.getElementById("Searchbtn").onclick = function () {
+            const str = document.getElementById("mySearch").value;
+            setTimeout('window.location.href="http://127.0.0.1:8000/filters?Title__icontains=${str}"', 0);
+           };            
+        </script>
+        {% if user.is_authenticated %}
+            <!-- <a href="#" class="profilelogo"><img src="{% static 'Images/notification.png' %}" alt="profile" style=" border-radius: 50px; width: 2em; height: 2em;"></a> -->
+            <div class="dropdown">
+                <button class="dropbtn"><img src="{% static 'Images/ProfileLogo2.png' %}" alt="profile" style=" border-radius: 50px; width: 3em; height: 3em;"></button>
+                <div class="dropdown-content">
+                    <a href="{% url 'userprofile' user.username %}" class="option2">My Profile</a>
+                    <a href="{% url 'logout' %}" class="option2">Logout</a>
+                </div>
+            </div>
+        {% else %}
+            <a href="{% url 'login' %}" class="option" style="color: black;">Sign In</a>
+            <a href="{% url 'register' %}" class="option" style="color: black;">Sign Up</a>
+        {% endif %}
+    </div>
+    </div>
+</nav>
+
+<script>
+    document.querySelectorAll(".option").forEach((link) => {
+        if (link.href === window.location.href) {
+            link.classList.add("active");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+
+    document.querySelectorAll(".option2").forEach((link) => {
+        if (link.href === window.location.href) {
+            link.classList.add("active2");
+            link.setAttribute("aria-current", "page");
+        }
+    });
+</script>

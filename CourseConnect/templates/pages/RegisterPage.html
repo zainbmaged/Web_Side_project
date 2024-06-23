@@ -1,0 +1,60 @@
+{% load static %}
+{% load crispy_forms_tags %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/login.css' %}">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}">
+    <link rel="shortcut icon" type="image/png" href="{% static 'Images/favicon.ico' %}">
+    <title>Register | CourseConnect</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="element1">
+            <h1 class="border-bottom mb-4">Register</h1>
+            {% for message in messages %}
+            <h5 style="color:red; position:absolute; top: 507px; left: 650px;">{{message}}</h5>
+            {% endfor %}
+            <form method="POST">
+                {% csrf_token %}
+                <fieldset>
+                    <legend class="border-bottom mb-4">Register Now!</legend>
+                    {{ form|crispy }}
+                </fieldset>
+                <br>
+                <div class="form-group">
+                    <button class="login-btn font-style font-size" type="submit">Sign Up</button>
+                </div>
+            </form>
+            <br>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already Have An Acount? <a class="ml-2" href="{% url 'login' %}">Sign In</a>
+                </small>
+            </div>
+            <p class="connect font-style font-size" style = "margin-right: 35px">or connect with</p>
+            <div class="div-buttons">
+                {% load socialaccount %}
+                <script src="//accounts.google.com/gsi/client" async></script>
+                {% if user.is_authenticated %}
+                <p>Welcome, You are logged in as {{ user.username }}</p>
+                {% else %}
+                <a href="{% provider_login_url 'google' %}">
+                    <button class="Facebook font-style" style = "margin-right: 35px">
+                        Google
+                    </button>
+                </a>
+                {% endif %}
+                <!--<button class="twitter font-style">
+                    Facebook
+                </button>-->
+            </div>
+            <br>
+        </div>
+    </div>
+</body>
+</html>
